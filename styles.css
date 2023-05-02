@@ -1,0 +1,37 @@
+.console-page {
+    height:95%;
+}
+
+.console-canvas {
+    border: solid 1px #00ff08;
+    background: #000;
+    width: 600px;
+    margin: 20px auto 5px auto; 
+    padding: 4px;
+    overflow-y: scroll; 
+    height: 100%;
+    
+}
+
+#command-line, #command-line:focus {
+    width: 565px;
+    color: #00ff08;
+    background-color: #000;
+    border: none;
+    padding: 0px 0px 0px 4px;
+    margin: 0px;
+    rows:1;
+    resize: none;
+}
+
+#command-line:focus {
+    border: none;
+    outline: none;
+}
+
+.console-font {
+    color: #00ff08;
+    background-color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    font-size:10pt;
+}
