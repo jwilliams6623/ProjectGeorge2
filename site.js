@@ -1,5 +1,8 @@
+let tally = 0;
 let commandLine;
 let commandHistory;
+let isInTheKitchen;
+
 
 function scrollToBottom() {
   var objDiv = document.getElementById("console-canvas");
@@ -42,5 +45,12 @@ function addToResponseText(command) {
 }
 
 function runCommand(command) {
-  addToResponseText("command: " + new Date().toLocaleTimeString());
+  ddToResponseText("command: " + new Date().toLocaleTimeString());
+  document.write("Hello?")
 }
+
+// let tally = 0;
+
+// function chapter1() {
+//     doument.write("Hello?");
+// }
