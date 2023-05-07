@@ -24,6 +24,10 @@
     resize: none;
 }
 
+#command-line-red {
+    color: #940000 !important
+}
+
 #command-line:focus {
     border: none;
     outline: none;
@@ -34,4 +38,8 @@
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
+}
+
+body {
+    background-color:#000
 }
