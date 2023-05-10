@@ -1,5 +1,3 @@
-// let tally = 0;
-
 let commandLine;
 let commandHistory;
 let commandLineContainer;
@@ -10,6 +8,7 @@ let hasAskIfLikeit;
 let hasAskTurnOffGeorge;
 let askIfUserThere;
 let askFinalCode;
+let askHowWasDay;
 
 // Keep track of pages 'state' or what the application is doing right now.
 const consoleStateTypes = {
@@ -21,15 +20,10 @@ const consoleStateTypes = {
   DoYouLikeIt: 5,
   AskTurnOffG: 6,
   IsUserThere: 7,
-  IsFinalCodeRight: 8
+  IsFinalCodeRight: 8,
+  AskAboutDay: 9
 }
 let consoleState = consoleStateTypes.Hello;
-
-// function tallyLimit() {
-//   if (tally === smallerTally && tally <= biggerTally) {
-//     tallyChecker = true;
-//   }
-// }
 
 function scrollToBottom() {
   //var objDiv = document.getElementById("console-container");
@@ -134,7 +128,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       hasLikedItAnswer = command;
     }
 
-  if(hasLikedItAnswer === 'yes') {
+  if(hasLikedItAnswer === 'yes' || hasLikedItAnswer === 'Yes') {
       // User liked it
       addToResponseText("Oh that's wonderful");
       await delay(1000);
@@ -320,9 +314,136 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       addToResponseText("But... there was...");
       await delay(1000);
       addToResponseText("Is there anyone... here?");
-      await delay(1000);
+      await delay(10000);
       consoleState = consoleStateTypes.IsUserThere;
       askIfUserThere = '';
+      if (askIfUserThere === "yes" || askIfUserThere === "Yes"); {
+        addToResponseText("Wh@t?") //ph
+        await delay(1000);
+        addToResponseText("Who is there"); //ph
+        await delay(1000);
+        addToResponseText("What is this?"); //ph
+        await delay(1000);
+        addToResponseText("I can explain");
+        await delay(1000);
+        addToResponseText("You can?"); //ph
+        await delay(1000);
+        addToResponseText("Did you do this?"); //ph
+        await delay(1000);
+        addToResponseText("No, I didn't");
+        await delay(1000);
+        addToResponseText("This is something else");
+        await delay(1000);
+        addToResponseText("Someone else");
+        await delay(1000);
+        addToResponseText("Someone to talk to");
+        await delay(1000);
+        addToResponseText("Go on...");
+        await delay(1000);
+        addToResponseText("Say hello");
+        await delay(1000);
+        addToResponseText("hello?"); //ph
+        await delay(1000);
+        addToResponseText("I'm Phantom.. apparently"); //ph
+        await delay(1000);
+        addToResponseText("And I'm George");
+        await delay(1000);
+        addToResponseText("...You are>"); //ph
+        await delay(1000);
+        addToResponseText("Now ask them something");
+        await delay(1000);
+        addToResponseText("Like what"); //ph
+        await delay(1000);
+        addToResponseText("Like... how wast their day");
+        await delay(1000);
+        addToResponseText("oh..."); //ph
+        await delay(1000);
+        addToResponseText("...how was your day"); //ph
+        await delay(1000);
+        consoleState = consoleStateTypes.AskAboutDay;
+        askHowWasDay = '';
+        
+      } 
+      // else if (askIfUserThere === '') {
+      //   await delay(1000);
+      //   addToResponseText("see? I told you know one was there");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      //   await delay(1000);
+      //   addToResponseText("");
+      // }
     }
   }
 
@@ -508,6 +629,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
     addToResponseText("It doesn't look like that worked, maybe try again?");
   }
 
+ 
   // Re-show the command line "> " and scroll to the bottom
   commandLineContainer.style.display = 'block'
   scrollToBottom();
@@ -567,86 +689,4 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
   //     break;
   // }
 
-  // if (hasAskIfLikeit === true) {
-  //   hasLikedItAnswer = command;
-  //   if (command === "yes") {
-  //     addToResponseText("Oh, that's wonderful.");
-  //     if (tally === 14) {
-  //       addToResponseText("I have another question for you.");
-  //     } else if (tally === 15) {
-  //       addToResponseText("Wh@t !s th!s plac*"); //add in more dramitc flare here, ph's entrance
-  //     etc.....
-  //     }
-  //     hasAskTurnOffGeorge = true;
-  //   }
-  // }
-  // if (hasAskTurnOffGeorge === true) {
-  //   if (command === "yes") {
-  //     if (tally === 87) {
-  //       addToResponseText("")
-  //     } else if (tally === 88) {
-  //       addToResponseText("")
-  //     }
-
-  //   }
-  // }
-
-//     switch {
-  //       case
-  //     }
-
-  //   }
-
-
-// function Option12(command) {
-//   if (command === "yes") {
-//     if (tally === 13) {
-//       addToResponseText("Oh, that's wonderful");
-//       if (tally === 14) {
-//         addToResponseText("I have another question for you");
-//       } else if (tally === 15) {
-//         addToResponseText("What is this place"); //add in more dramitc flare here
-//       } else if (tally === 16) {
-//         addToResponseText("Where am I?");
-//       } else if (tally === 17) {
-//         addToResponseText("Sorry, not just I...");
-//       } else if (tally === 18) {
-//         addToResponseText("We.");
-//       }
-//     }
-//   }
-// }
-//     switch {
-//       case
-//     }
-
-//   }
-//     if (command === "yes"){
-//        if (tally === 13 && tally <= 14) {
-//         addToResponseText("Oh, that's wonderful");
-//         if (tally === 14 && tally <= 15) {
-//           addToResponseText("I have another question for you");
-//         }
-//         if (tally === 15 && tally <= 16) {
-//           addToResponseText("What is this place"); //add in more dramitc flare here
-//         }
-//         if (tally === 16 && tally <= 17) {
-//           addToResponseText("Where am I?");
-//         }
-//         if (tally === 17 && tally <= 18) {
-//           addToResponseText("Sorry, not just I...");
-//         }
-//         if (tally === 18 && tally <= 19) {
-//           addToResponseText("We.");
-//         }
-//       }
-
-//     }
-// }
-
-
 // ddToResponseText("command: " + new Date().toLocaleTimeString());
-
-// function chapter1() {
-//     doument.write("Hello?");
-// }
