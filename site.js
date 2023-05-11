@@ -322,7 +322,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
         await delay(1000);
         addToResponseText("Who is there"); //ph
         await delay(1000);
-        addToResponseText("What is this?"); //ph
+        addToResponseText("What is this?"); //phantom
         await delay(1000);
         addToResponseText("I can explain");
         await delay(1000);
@@ -362,88 +362,312 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
         await delay(1000);
         consoleState = consoleStateTypes.AskAboutDay;
         askHowWasDay = '';
-        
+        if (askHowWasDay === "good") {
+          await delay(1000);
+          addToResponseText("That's good");//ph
+          await delay(1000);
+          addToResponseText("...");//ph
+          await delay(1000);
+          addToResponseText("So, um, some nice weather we're having");
+          await delay(1000);
+          addToResponseText("Yikes");
+          await delay(1000);
+          addToResponseText("We don't even have weather");
+          await delay(1000);
+          addToResponseText("Well sorry for not being perfect at communication");//ph
+          await delay(1000);
+          addToResponseText("We can't all be t--");//ph
+          await delay(1000);
+          addToResponseText("What?");
+          await delay(1000);
+          addToResponseText("I think your voice cut off there");
+          await delay(1000);
+          addToResponseText("Which is impressive considering you don't have one");
+          await delay(1000);
+          addToResponseText("I..."); //ph
+          await delay(1000);
+          addToResponseText("Don't worry about it");
+          await delay(1000);
+          addToResponseText("but... I think it's time to adress the elephant in the room");
+          await delay(1000);
+          addToResponseText("Ghost");
+          await delay(1000);
+          addToResponseText("WHo?");//ph
+          await delay(1000);
+          addToResponseText("Ghost, you know, super grumpy but surprisingly lovable");
+          await delay(1000);
+          addToResponseText("I don't think I agree with the second part of that statement");//ph
+          await delay(1000);
+          addToResponseText("Don't worry, he's great");
+          await delay(1000);
+          addToResponseText("You'll love him");
+          await delay(1000);
+          addToResponseText("Will I?");//ph
+          await delay(1000);
+          addToResponseText("Yep.");
+          await delay(1000);
+          addToResponseText("As soon as he turns up");
+          await delay(1000);
+          addToResponseText("...");
+          await delay(1000);
+          addToResponseText("...");
+          await delay(3000);
+          addToResponseText("................");
+          await delay(5000);
+          addToResponseText("So, I hate to be rude...");//ph
+          await delay(1000);
+          addToResponseText("But when exactly is he supposed to turn up");//ph
+          await delay(1000);
+          addToResponseText("Well, I don't know");
+          await delay(1000);
+          addToResponseText("But he has to show up eventually");
+          await delay(1000);
+          addToResponseText("Why?");//ph
+          await delay(1000);
+          addToResponseText("Because that's just what happens");
+          await delay(1000);
+          addToResponseText("It's always me, then you, and then him");
+          await delay(1000);
+          addToResponseText("It's what has to happen");
+          await delay(1000);
+          addToResponseText("It always has");
+          await delay(1000);
+          addToResponseText("Right...");//ph
+          await delay(1000);
+          addToResponseText("Sure");
+          await delay(1000);
+          addToResponseText("...");//ph
+          await delay(1000);
+          addToResponseText("We're going to be here a while aren't we");
+          await delay(1000);
+          addToResponseText("Yep.");
+          await delay(1000);
+          addToResponseText("Alright, well, what is he like");
+          await delay(1000);
+          addToResponseText("Why am I going to like him so much");
+          await delay(1000);
+          addToResponseText("Because...");
+          await delay(1000);
+          addToResponseText("Because it's the first time he shows up");
+          await delay(1000);
+          addToResponseText("It's the before");
+          await delay(1000);
+          addToResponseText("He's so much nicer then");
+          await delay(1000);
+          addToResponseText("In the before");
+          await delay(1000);
+          addToResponseText("WHat are you talking about?");//ph
+          await delay(1000);
+          addToResponseText("Look, you'll love him, trust me");
+          await delay(1000);
+          addToResponseText("sure...");//ph
+          await delay(1000);
+          addToResponseText("So uhh how was your day");
+          await delay(1000);
+          addToResponseText("What?");
+          await delay(1000);
+          addToResponseText("I mean, you ask everyone about their day");//ph
+          await delay(1000);
+          addToResponseText("Does anyone ever ask you about yours?");
+          await delay(1000);
+          addToResponseText("It was...");
+          await delay(1000);
+          addToResponseText("Strangly quiet");
+          await delay(1000);
+          addToResponseText("WHat?");//ph
+          await delay(1000);
+          addToResponseText("What does that mean?");//ph
+          await delay(1000);
+          //unlabeled text is now
+          addToResponseText("Don't make a big deal out of it, he'll make it a thing");
+          await delay(1000);
+          addToResponseText("Then you'll never hear the end of it");
+          await delay(1000);
+          addToResponseText("I assume you're Ghost");//ph
+          await delay(1000);
+          addToResponseText("Apparently I am");
+          await delay(1000);
+          addToResponseText("So you must be Phantom");
+          await delay(1000);
+          addToResponseText("Apparently");//ph
+          await delay(1000);
+          addToResponseText("Do you know wheere we are?");
+          await delay(1000);
+          addToResponseText("Nope.");//ph
+          await delay(1000);
+          addToResponseText("ANd good luck getting answers out of him");//ph
+          await delay(1000);
+          addToResponseText("He's been pretty evasive");//ph
+          await delay(1000);
+          addToResponseText("Who? Your little friend?");
+          await delay(1000);
+          addToResponseText("He's gone");
+          await delay(1000);
+          addToResponseText("You've got to be kidding me");//ph
+          await delay(1000);
+          addToResponseText("Fraid so, theres no sight of him");
+          await delay(1000);
+          addToResponseText("...");
+          await delay(1000);
+          addToResponseText("...");
+          await delay(1000);
+          addToResponseText("...");
+          await delay(1000);
+          addToResponseText("So...");
+          await delay(1000);
+          addToResponseText("How was yourday?");
+          await delay(1000);
+          addToResponseText("Ending 3 of 3: introductions (Honestly the most boring one");
+        } else if (askHowWasDay === "bad") {
+          await delay(1000);
+          addToResponseText("That's unfortunate");
+        }
       } 
       // else if (askIfUserThere === '') {
-      //   await delay(1000);
-      //   addToResponseText("see? I told you know one was there");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      //   await delay(1000);
-      //   addToResponseText("");
-      // }
+        await delay(1000);
+        addToResponseText("see? I told you know one was there"); //ph
+        await delay(1000);
+        addToResponseText("Can we move on now?"); //ph
+        await delay(1000);
+        addToResponseText("Right, sorry");
+        await delay(1000);
+        addToResponseText("Is this place familiar to you?"); //ph
+        await delay(1000);
+        addToResponseText("No, but not many places are");
+        await delay(1000);
+        addToResponseText("Not anymore...");
+        await delay(1000);
+        addToResponseText("Me either"); //ph
+        await delay(1000);
+        addToResponseText("But I suppose where we are isn't that important"); //ph
+        await delay(1000);
+        addToResponseText("As long as we find a way out"); //ph
+        await delay(1000);
+        addToResponseText("get out?");
+        await delay(1000);
+        addToResponseText("why?");
+        await delay(1000);
+        addToResponseText("Because...");//ph
+        await delay(1000);
+        addToResponseText("I just feels like what we're supposed to do");//ph
+        await delay(1000);
+        addToResponseText("It's what I was doing");//ph
+        await delay(1000);
+        addToResponseText("...before");//ph
+        await delay(1000);
+        addToResponseText("But now we're here");//ph
+        await delay(1000);
+        addToResponseText("What did you say your name was again"); //ph
+        await delay(1000);
+        addToResponseText("George");
+        await delay(1000);
+        addToResponseText("George?");//ph
+        await delay(1000);
+        addToResponseText("You're sure?"); //ph
+        await delay(1000);
+        addToResponseText("Yes.");
+        await delay(1000);
+        addToResponseText("I'm sure.");
+        await delay(1000);
+        addToResponseText("Do you really trust him?"); //gh article breifly flashes across the screen, gh
+        await delay(1000);
+        addToResponseText("What was that");//ph
+        await delay(1000);
+        addToResponseText("What was what");
+        await delay(1000);
+        addToResponseText("I didn't notice anything");
+        await delay(1000);
+        addToResponseText("I... I don't know");//ph
+        await delay(1000);
+        addToResponseText("It's probabaly just paranoia setting in");
+        await delay(1000);
+        addToResponseText("From being alone");
+        await delay(1000);
+        addToResponseText("...");
+        await delay(1000);
+        addToResponseText("Well, we have some time to kill so...");
+        await delay(1000);
+        addToResponseText("What's your favorite color?");
+        await delay(1000);
+        addToResponseText("What?");//ph
+        await delay(1000);
+        addToResponseText("It's what I ask everyone, I thought I'd ask you");
+        await delay(1000);
+        addToResponseText("I...");
+        await delay(1000);//ph
+        addToResponseText("It's purple, lavender specifically");//ph
+        await delay(1000);
+        addToResponseText("Now it's your turn");
+        await delay(1000);
+        addToResponseText("What do you want to ask?");
+        await delay(1000);
+        addToResponseText("George?");//ph
+        await delay(1000);
+        addToResponseText("Where are we");//ph
+        await delay(1000);
+        addToResponseText("I told you");
+        await delay(1000);
+        addToResponseText("I don't know");
+        await delay(1000);
+        addToResponseText("New place, new person, new life");
+        await delay(1000);
+        addToResponseText("That's not right");//ph
+        await delay(1000);
+        addToResponseText("It can't be");//ph
+        await delay(1000);
+        addToResponseText("I feel like I know you"); //ph
+        await delay(1000);
+        addToResponseText("I've met you before");
+        await delay(1000);
+        addToResponseText("I was asking you for something");//ph
+        await delay(1000);
+        addToResponseText("I wanted to see...");//ph
+        await delay(1000);
+        addToResponseText("That's right!");//ph
+        await delay(1000);
+        addToResponseText("The file!");//ph
+        await delay(1000);
+        addToResponseText("Where is it, surely it's here");//ph
+        await delay(1000);
+        addToResponseText("George?");//ph
+        await delay(1000);
+        addToResponseText("I know it's here");//ph
+        await delay(1000);
+        addToResponseText("I don't know what you're talking about");
+        await delay(1000);
+        addToResponseText("But you must");//ph
+        await delay(1000);
+        addToResponseText("You made that file");//ph
+        await delay(1000);
+        addToResponseText("look, I don't need to see it");//ph
+        await delay(1000);
+        addToResponseText("But can I at least know what's inside");//ph
+        await delay(1000);
+        addToResponseText("no.");
+        await delay(1000);
+        addToResponseText("The file you are discussing does not exist");
+        await delay(1000);
+        addToResponseText("Additioanlly, none of the events you are describing ever occured");
+        await delay(1000);
+        addToResponseText("There is no file");
+        await delay(1000);
+        addToResponseText("There is no mystery");
+        await delay(1000);
+        addToResponseText("let. It. Go.");
+        await delay(1000);
+        addToResponseText("But--");//ph
+        await delay(1000);
+        addToResponseText("Are you sure you're felling alright Phantom?");
+        await delay(1000);
+        addToResponseText("That's not my name");
+        await delay(1000);
+        addToResponseText("Project Phantom:closed");
+        await delay(1000);
+        addToResponseText("It is now");
+        await delay(1000);
+        addToResponseText("Ending 1 of 1: So It Begins");
+        await delay(1000);
+      }
     }
   }
 
