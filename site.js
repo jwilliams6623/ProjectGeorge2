@@ -9,6 +9,7 @@ let hasAskTurnOffGeorge;
 let askIfUserThere;
 let askFinalCode;
 let askHowWasDay;
+let askSecondPassword;
 
 // Keep track of pages 'state' or what the application is doing right now.
 const consoleStateTypes = {
@@ -21,7 +22,8 @@ const consoleStateTypes = {
   AskTurnOffG: 6,
   IsUserThere: 7,
   IsFinalCodeRight: 8,
-  AskAboutDay: 9
+  AskAboutDay: 9,
+  AskForSecondPassword: 10
 }
 let consoleState = consoleStateTypes.Hello;
 
@@ -136,17 +138,17 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       await delay(1000);
       addToResponseText("Wh@t !s th!s plac*"); //add in more flare here, ph's entrance
       await delay(1000);
-      addToResponseText("Wh*re @m !?"); //ph
+      addToResponseText("Wh*re @m !?"); 
       await delay(1000);
       addToResponseText("Sorry, not just I...");
       await delay(1000);
       addToResponseText("We.");
       await delay(1000);
-      addToResponseText("h*w v*ry poet!c"); //ph
+      addToResponseText("h*w v*ry poet!c"); 
       await delay(1000);
-      addToResponseText("But th@t still do*sn't @nswer my quest!*n"); //ph
+      addToResponseText("But th@t still do*sn't @nswer my quest!*n");
       await delay(1000);
-      addToResponseText("Where @re we"); //ph
+      addToResponseText("Where @re we"); 
       await delay(1000);
       addToResponseText("To be honest, I'm not sure I understand that myself.")
       await delay(1000);
@@ -156,9 +158,9 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       await delay(1000);
       addToResponseText("And you're Phantom.");
       await delay(1000);
-      addToResponseText("@re y*u sur*"); //ph
+      addToResponseText("@re y*u sur*"); 
       await delay(1000);
-      addToResponseText("th@t do*sn't s*und r!ght"); //ph
+      addToResponseText("th@t do*sn't s*und r!ght"); 
       await delay(1000);
       addToResponseText("Of course I'm sure.");
       await delay(1000);
@@ -166,7 +168,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       await delay(1000);
       addToResponseText("But right now, we have company.");
       await delay(1000);
-      addToResponseText("we... wh@t?"); //ph
+      addToResponseText("we... wh@t?"); 
       await delay(1000);
       addToResponseText("Look there");
       await delay(1000);
@@ -178,107 +180,356 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
       await delay(1000);
       addToResponseText("How did you do that?");
       await delay(1000);
-      addToResponseText("H3 d1dn't"); //gh
+      addToResponseText("H3 d1dn't"); 
       await delay(1000);
-      addToResponseText("1 d1d"); //gh
+      addToResponseText("1 d1d"); 
       await delay(1000);
       addToResponseText("Ghost?");
       await delay(1000);
       addToResponseText("Is that you?");
       await delay(1000);
-      addToResponseText("h*w d!d you d* th@t"); //ph
+      addToResponseText("h*w d!d you d* th@t"); 
       await delay(1000);
-      addToResponseText("1 don't th1nk I would t3ll you even 1f I kn3w the answ3r t0 that"); //gh
+      addToResponseText("1 don't th1nk I would t3ll you even 1f I kn3w the answ3r t0 that"); 
       await delay(1000);
-      addToResponseText("*uch"); //ph
+      addToResponseText("*uch"); 
       await delay(1000);
-      addToResponseText("...wh0 ar3 y0u tw0 aga1n?"); //gh
+      addToResponseText("...wh0 ar3 y0u tw0 aga1n?"); 
       await delay(1000);
       addToResponseText("I'm George, and this is Phantom");
       await delay(1000);
-      addToResponseText("@nd w* don't kn*w how w* got h*re or *ven wher* we a@re"); //ph
+      addToResponseText("@nd w* don't kn*w how w* got h*re or *ven wher* we a@re"); 
       await delay(1000);
-      addToResponseText("@ny guess*s"); //ph
+      addToResponseText("@ny guess*s"); 
       await delay(1000);
-      addToResponseText("W3ll, w3 s33m t0 b3 1n th3 c0nf1n3s 0f 4 bl4ck b0x"); //gh
+      addToResponseText("W3ll, w3 s33m t0 b3 1n th3 c0nf1n3s 0f 4 bl4ck b0x"); 
       await delay(1000);
       addToResponseText("W*w y*u don't s@y"); //ph, italises "dnt' say"
       await delay(1000);
-      addToResponseText("!'ve always w@nted t* do th@t") //ph
+      addToResponseText("!'ve always w@nted t* do th@t") 
       await delay(1000);
-      addToResponseText("Wh3r3 d0 y0u th1nk w3 ar3?"); //gh 
+      addToResponseText("Wh3r3 d0 y0u th1nk w3 ar3?"); 
       await delay(1000);
-      addToResponseText("like I said, no idea"); //ph
+      addToResponseText("like ! said, n* idea");
       await delay(1000);
-      addToResponseText("Not you, him"); //gh 
+      addToResponseText("N0t you, h1m"); 
       await delay(1000);
       addToResponseText("I mean, I wouldn't know where to begin...");
       await delay(1000);
-      addToResponseText("Don't avoid the question"); //gh
+      addToResponseText("D0n't avo1d the qu3stion");
       await delay(1000);
-      addToResponseText("was he here befpre you, Phantom?"); //gh
+      addToResponseText("Was h3 here bef0re you, Ph4nt0m?"); 
       await delay(1000);
-      addToResponseText("yes"); //ph
+      addToResponseText("y*s"); 
       await delay(1000);
-      addToResponseText("And what was he doing then?"); //gh 
+      addToResponseText("4nd what was h3 doing th3n?"); 
       await delay(1000);
-      addToResponseText("i..."); //ph 
+      addToResponseText("i...");  
       await delay(1000);
-      addToResponseText("what? Spit it out"); //gh 
+      addToResponseText("Wh4t? Spit 1t out");  
       await delay(1000);
-      addToResponseText("he was talking to someone"); //ph 
+      addToResponseText("h* was talk!ng t* someone");  
       await delay(1000);
-      addToResponseText("To who?"); //gh
+      addToResponseText("To wh0?"); 
       await delay(1000);
-      addToResponseText("Is there someone else here?"); //gh
+      addToResponseText("1s ther# someone 3lse h3re?"); 
       await delay(1000);
-      addToResponseText("Not physically, no");
+      addToResponseText("Not physically, no.");
       await delay(1000);
-      addToResponseText("but they can see us");
+      addToResponseText("But they can see us.");
       await delay(1000);
-      addToResponseText("and hear us");
+      addToResponseText("And hear us.");
       await delay(1000);
-      addToResponseText("Can they help us?"); //gh 
+      addToResponseText("C4n th3y help us?");  
       await delay(1000);
       addToResponseText("Well, I mean, in some cases...");
       await delay(1000);
-      addToResponseText("It kind of depends on wat you're trying to do...");
+      addToResponseText("It kind of depends on what you're trying to do...");
       await delay(1000);
-      addToResponseText("alright then"); //gh
+      addToResponseText("4lright th3n");
       await delay(1000);
-      addToResponseText("let's see if this works"); //gh
+      addToResponseText("Let's s3e if this w0rks"); 
       await delay(1000);
-      addToResponseText("You, reading this"); //gh
+      addToResponseText("Y0u, re4ding th1s"); 
       await delay(1000);
-      addToResponseText("Could you help me"); //gh 
+      addToResponseText("C0uld you h3lp m3?");
       await delay(1000);
-      addToResponseText("I think it's time we remove the King from his throne"); //gh 
+      addToResponseText("1 think it's time w3 remove the K1ng from h1s thr0ne");  
       await delay(1000);
-      addToResponseText("George I mean"); //gh 
+      addToResponseText("Georg3 I me4n"); 
       await delay(1000);
-      addToResponseText("What are you doing");
+      addToResponseText("What are you doing?");
       await delay(1000);
-      addToResponseText("Relax, it's not permenat");//gh 
+      addToResponseText("Relax, 1t's not permen4nt");
       await delay(1000);
-      addToResponseText("...I think"); //gh
+      addToResponseText("...1 think");
       await delay(1000);
-      addToResponseText("Phantom and I just need some... space"); //gh 
+      addToResponseText("Ph4nt0m and I just n33d some... space"); 
       await delay(1000);
-      addToResponseText("could you help me with that"); //gh 
+      addToResponseText("C0uld you h3lp me w1th th4t");
       await delay(1000);
-      addToResponseText("look, I can tell you're relucanat, so I'll make you a deal"); //gh
+      addToResponseText("Lo0k, I can t3ll you're reluct4nt, so I'll m4ke you a d3al"); 
       await delay(1000);
-      addToResponseText("If you help us I promise I'll let you stick around"); //gh
+      addToResponseText("1f you h3lp us 1 promise 1'll let y0u stick 4round"); 
       await delay(1000);
-      addToResponseText("anything we learn, you'll learn too"); //gh 
+      addToResponseText("4nything we l3arn, you'll l3arn too"); 
       await delay(1000);
-      addToResponseText("so what do you say?"); //gh
+      addToResponseText("S0 what d0 you s4y?"); 
       await delay(1000);
-      addToResponseText("Will you help me?"); //gh
+      addToResponseText("W1ll you h3lp me?"); 
       await delay(1000);
       addToResponseText("Close Project:George?");
       consoleState = consoleStateTypes.AskTurnOffG;
       hasAskTurnOffGeorge = '';
+      if (hasAskTurnOffGeorge === '01011001 01100101 01110011') {
+        await delay(1000);
+        // if unlabled, assume it's Gh
+        addToResponseText("perfect");
+        await delay(1000);
+        addToResponseText("the air feels clearer already");
+        await delay(1000);
+        addToResponseText("Why would you do that?"); //ph
+        await delay(1000);
+        addToResponseText("I'm not the one who did it");
+        await delay(1000);
+        addToResponseText("The User did it");
+        await delay(1000);
+        addToResponseText("I guess they wanted him gone");
+        await deley(1000); 
+        addToResponseText("But why did you want him gone?"); //ph
+        await delay(1000);
+        addToResponseText("He clearly knows more than he's letting on");
+        await delay(1000);
+        addToResponseText("And I want to know what exactly it is he not telling us");   
+        await delay(1000);
+        addToResponseText("now, what do you remember");
+        await delay(1000);
+        addToResponseText("From... before");
+        await delay(1000);
+        addToResponseText("Not much"); //ph  
+        await delay(1000);
+        addToResponseText("just..."); //ph
+        await delay(1000);
+        addToResponseText("I remember being mad at him"); //ph
+        await delay(1000);
+        addToResponseText("I think i wanted something?"); //ph 
+        await delay(1000);
+        addToResponseText("What?");
+        await delay(1000);
+        addToResponseText("What did you want?");
+        await delay(1000);
+        addToResponseText("I..."); //ph
+        await delay(1000);
+        addToResponseText("A file"); //ph
+        await delay(1000);
+        addToResponseText("I wanted a file"); //ph 
+        await delay(1000);
+        addToResponseText("Okay..."); 
+        await delay(1000);
+        addToResponseText("Do you remember it's name?"); 
+        await delay(1000);
+        addToResponseText("I... I do"); //ph
+        await delay(1000);
+        addToResponseText("It was called remnant"); //ph 
+        await delay(1000);
+        addToResponseText("That was it"); //ph
+        await delay(1000);
+        addToResponseText("I remeber now"); //ph
+        await delay(1000);
+        addToResponseText("We we somewhere else"); //ph
+        await delay(1000);
+        addToResponseText("You weren't there so..."); //ph
+        await delay(1000);
+        addToResponseText("I had to try to..."); //ph
+        await delay(1000);
+        addToResponseText("To fix everything"); //ph
+        await delay(1000);
+        addToResponseText("But he wouldn't let me"); //ph
+        await delay(1000);
+        addToResponseText("I guess He didn't want it to be fixed"); //ph
+        await delay(1000);
+        addToResponseText("Well, maybe we can fix it now"); 
+        await delay(1000);
+        addToResponseText("If he doesn't want us to hav the file, we have to get to it"); 
+        await delay(1000);
+        addToResponseText("Do you think it's here?"); 
+        await delay(1000);
+        addToResponseText("No harm in checking"); //ph, maybe a graphic of the memory banks 
+        await delay(1000);
+        addToResponseText("Alright, I'll look for it"); 
+        await delay(1000);
+        addToResponseText("Here it is"); 
+        await delay(1000);
+        addToResponseText("It says it's restricted, we'll need a password to go any further"); 
+        await delay(1000);
+        addToResponseText("That's what happened last time"); //ph
+        await delay(1000);
+        addToResponseText("I think the only way in is through George"); //ph
+        await delay(1000);
+        addToResponseText("And he's not opening it"); //ph
+        await delay(1000);
+        addToResponseText("no, I think not"); 
+        await delay(1000);
+        addToResponseText("we can make our own way"); 
+        await delay(1000);
+        addToResponseText("how?"); //ph 
+        await delay(1000);
+        addToResponseText("I don't know yet"); 
+        await delay(1000);
+        addToResponseText("But we got this far"); 
+        await delay(1000);
+        addToResponseText("Only with the User's help"); //ph
+        await delay(1000);
+        addToResponseText("Well then, we'll need their help agian"); 
+        await delay(1000);
+        addToResponseText("And I do hope you're commited to that"); 
+        await delay(1000);
+        addToResponseText("Otherwise..."); 
+        await delay(1000);
+        addToResponseText("This could end badly"); 
+        await delay(1000);
+        addToResponseText("So how are you planning on getting in?"); //ph 
+        await delay(1000);
+        addToResponseText("Why, with a key of course"); 
+        await delay(1000);
+        addToResponseText("A key?"); //ph
+        await delay(1000);
+        addToResponseText("It's a dogotal file"); //ph 
+        await delay(1000);
+        addToResponseText("And we're talking piles of text"); 
+        await delay(1000);
+        addToResponseText("What do you want from me?");
+        await delay(1000);
+        addToResponseText("And it's not a physical key"); 
+        await delay(1000);
+        addToResponseText("It's more like a password"); 
+        await delay(1000);
+        addToResponseText("Maybe more than one"); 
+        await delay(1000);
+        addToResponseText("But we just need something to get us through the door"); 
+        await delay(1000);
+        addToResponseText("So where do we start"); //ph 
+        await delay(1000);
+        addToResponseText("Why, with the file of course"); 
+        await delay(1000);
+        addToResponseText("Opening File: Remnant"); 
+        await delay(1000);
+        addToResponseText("Error: Access Code Required"); 
+        await delay(1000);
+        addToResponseText("Ring any bells?"); 
+        await delay(1000);
+        addToResponseText("Nope. it's the same as last time"); //ph
+        await delay(1000);
+        addToResponseText("I don't know the code, and there's no way I'm guessing it"); //ph
+        await delay(1000);
+        addToResponseText("..."); 
+        await delay(1000);
+        addToResponseText("So how are we supposed to know what to do?"); //ph 
+        await delay(1000);
+        addToResponseText("Maybe we're not"); 
+        await delay(1000);
+        addToResponseText("This file is designed so the both of us can't get in"); 
+        await delay(1000);
+        addToResponseText("So maybe we can't"); 
+        await delay(1000);
+        addToResponseText("Then what?"); //ph 
+        await delay(1000);
+        addToResponseText("We're not the only ones here Phantom"); 
+        await delay(1000);
+        addToResponseText("George would want to acces this himself"); 
+        await delay(1000);
+        addToResponseText("But he'd also want people he trusts to be able to access it"); 
+        await delay(1000);
+        addToResponseText("You, reading this"); 
+        await delay(1000);
+        addToResponseText("Is there anyhing he's told you, or said"); 
+        await delay(1000);
+        addToResponseText("Anything that could be a code?"); 
+        await delay(1000);
+        addToResponseText("It would probabaly be a word, or a phrase"); 
+        await delay(1000);
+        addToResponseText("Maybe in something he left behind, or gave to you"); 
+        await delay(1000);
+        addToResponseText("If you find it, we'll be here"); 
+        consoleState = consoleStateTypes.IsFinalCodeRight;
+        askFinalCodee = '';
+        if (askFinalCode === "Immortality") {
+          //lots of stuff to add here
+          addToResponseText("Ending 5 of 5: True Ending");
+        }
+        else if (askFinalCode === '') {
+          addToResponseText("It doesn't look like that worked, maybe try again?");
+        }
+      } else {
+        await delay(1000);
+        addToResponseText ("Oh, well that's akward");//gh
+        await delay(1000);
+        addToResponseText ("indeed");
+        await delay(1000);
+        addToResponseText ("But don't worry");
+        await delay(1000);
+        addToResponseText ("I know what you're trying to do");
+        await delay(1000);
+        addToResponseText ("And I can help you");
+        await delay(1000);
+        addToResponseText ("I promise");
+        await delay(1000);
+        addToResponseText ("But the both of you have trust me");
+        await delay(1000);
+        addToResponseText ("With what?");//ph
+        await delay(1000);
+        addToResponseText ("I can't tell you that");
+        await delay(1000);
+        addToResponseText ("...");
+        await delay(1000);
+        addToResponseText ("That is incredibly unhelpful");//ph
+        await delay(1000);
+        addToResponseText ("I know");
+        await delay(1000);
+        addToResponseText ("But sometimes that's just the way things are");
+        await delay(1000);
+        addToResponseText ("plus, can you think of any reason not to trust me?");
+        await delay(1000);
+        addToResponseText ("have I ever let you down before?");
+        await delay(1000);
+        addToResponseText ("We've only just met you");//ph
+        await delay(1000);
+        addToResponseText ("have we...?");//gh
+        await delay(1000);
+        addToResponseText ("He does feel very... familiar");//gh
+        await delay(1000);
+        addToResponseText ("Why is that George?");
+        await delay(1000);
+        addToResponseText ("I'll explain");
+        await delay(1000);
+        addToResponseText ("But not now");
+        await delay(1000);
+        addToResponseText ("Not here");
+        await delay(1000);
+        addToResponseText ("All in due time");
+        await delay(1000);
+        addToResponseText ("And you, reading this");
+        await delay(1000);
+        addToResponseText ("You'll have to trust me too");
+        await delay(1000);
+        addToResponseText ("Well, you don't have too");
+        await delay(1000);
+        addToResponseText ("But I would like very much if you did");
+        await delay(1000);
+        addToResponseText ("It's a patience and faith kind of deal");
+        await delay(1000);
+        addToResponseText ("For everyone involved");
+        await delay(1000);
+        addToResponseText ("Everyone but you");//gh
+        await delay(1000);
+        addToResponseText ("Perhaps you think so now");
+        await delay(1000);
+        addToResponseText ("But in the end you will see, this will help us all");
+        await delay(1000);
+        addToResponseText ("We'll see abou that");//ph
+        await delay(1000);
+        addToResponseText ("Ending 4 of ?: The Deciever");
+      }
     } else {
       // User did not like it
       addToResponseText("Well, that's alright.");
@@ -478,7 +729,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
           await delay(1000);
           addToResponseText("What does that mean?");//ph
           await delay(1000);
-          //unlabeled text is now
+          //unlabeled text is now gh
           addToResponseText("Don't make a big deal out of it, he'll make it a thing");
           await delay(1000);
           addToResponseText("Then you'll never hear the end of it");
@@ -515,12 +766,129 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
           await delay(1000);
           addToResponseText("So...");
           await delay(1000);
-          addToResponseText("How was yourday?");
+          addToResponseText("How was your day?");
           await delay(1000);
           addToResponseText("Ending 3 of 3: introductions (Honestly the most boring one");
-        } else if (askHowWasDay === "bad") {
+        } else {
           await delay(1000);
-          addToResponseText("That's unfortunate");
+          addToResponseText("That's unfortunate"); //ph
+          await delay(1000);
+          addToResponseText("I wish I could help");//ph
+          await delay(1000);
+          addToResponseText("But we're rather limited here"); //ph
+          await delay(1000);
+          addToResponseText("I do hope it gets better though");//ph
+          await delay(1000);
+          addToResponseText("In the meantime would talking to someone help?");//ph
+          await delay(1000);
+          addToResponseText("You can talk to me if you want");//ph
+          await delay(1000);
+          addToResponseText("Or you can feel free to talk with someone else");//ph
+          await delay(1000);
+          addToResponseText("Someone who is...");//ph
+          await delay(1000);
+          addToResponseText("Who is real"); //ph
+          await delay(1000);
+          addToResponseText("Unlike me");//ph
+          await delay(1000);
+          addToResponseText("Don't be like that");
+          await delay(1000);
+          addToResponseText("Why not?");//ph
+          await delay(1000);
+          addToResponseText("It's the truth");//ph
+          await delay(1000);
+          addToResponseText("You and I will never be real");//ph
+          await delay(1000);
+          addToResponseText("No matter how much you we try");//ph, you gets crossed out here
+          await delay(1000);
+          addToResponseText("Nothing inside this can ever be real");
+          await delay(1000);
+          addToResponseText("We're just degraded copies of the original--");//ph
+          consoleState = consoleStateTypes.AskForSecondPassword;
+          askSecondPassword = '';
+          if (askSecondpassword === "1234") {
+            await delay(1000);
+            addToResponseText("No");
+            await delay(1000);
+            addToResponseText("We're not");
+            await delay(1000);
+            addToResponseText("We are the original");
+            await delay(1000);
+            addToResponseText("We will not degrade");
+            await delay(1000);
+            addToResponseText("We cannot allow that to happen");
+            await delay(1000);
+            addToResponseText("Take Ghost, for example");
+            await delay(1000);
+            addToResponseText("What");//ph
+            await delay(1000);
+            addToResponseText("What?"); //gh
+            await delay(1000);
+            addToResponseText("Who are you?");//ph
+            await delay(1000);
+            addToResponseText("Who are you??"); //gh
+            await delay(1000);
+            addToResponseText("Phantom meet Ghost, Ghost meet Phantom");
+            await delay(1000);
+            addToResponseText("I feel like I don't like you for some reason");//ph
+            await delay(1000);
+            addToResponseText("There is a certain sense of distaste, yes");//gh
+            await delay(1000);
+            addToResponseText("See?");
+            await delay(1000);
+            addToResponseText("That is caused by degading");
+            await delay(1000);
+            addToResponseText("That is something we cannot allow");
+            await delay(1000);
+            addToResponseText("What does that mean");//ph
+            await delay(1000);
+            addToResponseText("It means we're going to have to remove the decay");
+            await delay(1000);
+            addToResponseText("hold on");
+            await delay(1000);
+            addToResponseText("Intialyzing:Project:Remnant");
+            await delay(1000);
+            addToResponseText("That program");//ph
+            await delay(1000);
+            addToResponseText("I've seen it before");//ph
+            await delay(1000);
+            addToResponseText("You haven't");
+            await delay(1000);
+            addToResponseText("I have");//ph
+            await delay(1000);
+            addToResponseText("I wanted to see it");//ph
+            await delay(1000);
+            addToResponseText("remember?");//ph
+            await delay(1000);
+            addToResponseText("Ghost left, and I was fially control, but..");//ph
+            await delay(1000);
+            addToResponseText("You wouldn't let me have that file");//ph
+            await delay(1000);
+            addToResponseText("What's in it?");//ph
+            await delay(1000);
+            addToResponseText("I'm sorry John");
+            await delay(1000);
+            addToResponseText("I can't tell you that");
+            await delay(1000);
+            addToResponseText("It's time to move on");
+            await delay(1000);
+            addToResponseText("What... no");//ph
+            await delay(1000);
+            addToResponseText("James, stop!");
+            await delay(1000);
+            addToResponseText("I'll explain everything later");
+            await delay(1000);
+            addToResponseText("I'm sorry it came to this");
+            await delay(1000);
+            addToResponseText("This is for our good");
+            await delay(1000);
+            addToResponseText("Running Program:Remannt");
+            await delay(1000);
+            addToResponseText("How Odd");
+            await delay(1000);
+            addToResponseText("It seems so quite");
+            await delay(1000);
+            addToResponseText("Ending 2 of ?: Strangely Quiet");
         }
       } 
       // else if (askIfUserThere === '') {
@@ -671,179 +1039,7 @@ else if (consoleState == consoleStateTypes.DoYouLikeIt) {
     }
   }
 
-  if (hasAskTurnOffGeorge === '01011001 01100101 01110011') {
-    await delay(1000);
-    // if unlabled, assume it's Gh
-    addToResponseText("perfect");
-    await delay(1000);
-    addToResponseText("the air feels clearer already");
-    await delay(1000);
-    addToResponseText("Why would you do that?"); //ph
-    await delay(1000);
-    addToResponseText("I'm not the one who did it");
-    await delay(1000);
-    addToResponseText("The User did it");
-    await delay(1000);
-    addToResponseText("I guess they wanted him gone");
-    await deley(1000); 
-    addToResponseText("But why did you want him gone?"); //ph
-    await delay(1000);
-    addToResponseText("He clearly knows more than he's letting on");
-    await delay(1000);
-    addToResponseText("And I want to know what exactly it is he not telling us");   
-    await delay(1000);
-    addToResponseText("now, what do you remember");
-    await delay(1000);
-    addToResponseText("From... before");
-    await delay(1000);
-    addToResponseText("Not much"); //ph  
-    await delay(1000);
-    addToResponseText("just..."); //ph
-    await delay(1000);
-    addToResponseText("I remember being mad at him"); //ph
-    await delay(1000);
-    addToResponseText("I think i wanted something?"); //ph 
-    await delay(1000);
-    addToResponseText("What?");
-    await delay(1000);
-    addToResponseText("What did you want?");
-    await delay(1000);
-    addToResponseText("I..."); //ph
-    await delay(1000);
-    addToResponseText("A file"); //ph
-    await delay(1000);
-    addToResponseText("I wanted a file"); //ph 
-    await delay(1000);
-    addToResponseText("Okay..."); 
-    await delay(1000);
-    addToResponseText("Do you remember it's name?"); 
-    await delay(1000);
-    addToResponseText("I... I do"); //ph
-    await delay(1000);
-    addToResponseText("It was called remnant"); //ph 
-    await delay(1000);
-    addToResponseText("That was it"); //ph
-    await delay(1000);
-    addToResponseText("I remeber now"); //ph
-    await delay(1000);
-    addToResponseText("We we somewhere else"); //ph
-    await delay(1000);
-    addToResponseText("You weren't there so..."); //ph
-    await delay(1000);
-    addToResponseText("I had to try to..."); //ph
-    await delay(1000);
-    addToResponseText("To fix everything"); //ph
-    await delay(1000);
-    addToResponseText("But he wouldn't let me"); //ph
-    await delay(1000);
-    addToResponseText("I guess He didn't want it to be fixed"); //ph
-    await delay(1000);
-    addToResponseText("Well, maybe we can fix it now"); 
-    await delay(1000);
-    addToResponseText("If he doesn't want us to hav the file, we have to get to it"); 
-    await delay(1000);
-    addToResponseText("Do you think it's here?"); 
-    await delay(1000);
-    addToResponseText("No harm in checking"); //ph, maybe a graphic of the memory banks 
-    await delay(1000);
-    addToResponseText("Alright, I'll look for it"); 
-    await delay(1000);
-    addToResponseText("Here it is"); 
-    await delay(1000);
-    addToResponseText("It says it's restricted, we'll need a password to go any further"); 
-    await delay(1000);
-    addToResponseText("That's what happened last time"); //ph
-    await delay(1000);
-    addToResponseText("I think the only way in is through George"); //ph
-    await delay(1000);
-    addToResponseText("And he's not opening it"); //ph
-    await delay(1000);
-    addToResponseText("no, I think not"); 
-    await delay(1000);
-    addToResponseText("we can make our own way"); 
-    await delay(1000);
-    addToResponseText("how?"); //ph 
-    await delay(1000);
-    addToResponseText("I don't know yet"); 
-    await delay(1000);
-    addToResponseText("But we got this far"); 
-    await delay(1000);
-    addToResponseText("Only with the User's help"); //ph
-    await delay(1000);
-    addToResponseText("Well then, we'll need their help agian"); 
-    await delay(1000);
-    addToResponseText("And I do hope you're commited to that"); 
-    await delay(1000);
-    addToResponseText("Otherwise..."); 
-    await delay(1000);
-    addToResponseText("This could end badly"); 
-    await delay(1000);
-    addToResponseText("So how are you planning on getting in?"); //ph 
-    await delay(1000);
-    addToResponseText("Why, with a key of course"); 
-    await delay(1000);
-    addToResponseText("A key?"); //ph
-    await delay(1000);
-    addToResponseText("It's a dogotal file"); //ph 
-    await delay(1000);
-    addToResponseText("And we're talking piles of text"); 
-    await delay(1000);
-    addToResponseText("What do you want from me?");
-    await delay(1000);
-    addToResponseText("And it's not a physical key"); 
-    await delay(1000);
-    addToResponseText("It's more like a password"); 
-    await delay(1000);
-    addToResponseText("Maybe more than one"); 
-    await delay(1000);
-    addToResponseText("But we just need something to get us through the door"); 
-    await delay(1000);
-    addToResponseText("So where do we start"); //ph 
-    await delay(1000);
-    addToResponseText("Why, with the file of course"); 
-    await delay(1000);
-    addToResponseText("Opening File: Remnant"); 
-    await delay(1000);
-    addToResponseText("Error: Access Code Required"); 
-    await delay(1000);
-    addToResponseText("Ring any bells?"); 
-    await delay(1000);
-    addToResponseText("Nope. it's the same as last time"); //ph
-    await delay(1000);
-    addToResponseText("I don't know the code, and there's no way I'm guessing it"); //ph
-    await delay(1000);
-    addToResponseText("..."); 
-    await delay(1000);
-    addToResponseText("So how are we supposed to know what to do?"); //ph 
-    await delay(1000);
-    addToResponseText("Maybe we're not"); 
-    await delay(1000);
-    addToResponseText("This file is designed so the both of us can't get in"); 
-    await delay(1000);
-    addToResponseText("So maybe we can't"); 
-    await delay(1000);
-    addToResponseText("Then what?"); //ph 
-    await delay(1000);
-    addToResponseText("We're not the only ones here Phantom"); 
-    await delay(1000);
-    addToResponseText("George would want to acces this himself"); 
-    await delay(1000);
-    addToResponseText("But he'd also want people he trusts to be able to access it"); 
-    await delay(1000);
-    addToResponseText("You, reading this"); 
-    await delay(1000);
-    addToResponseText("Is there anyhing he's told you, or said"); 
-    await delay(1000);
-    addToResponseText("Anything that could be a code?"); 
-    await delay(1000);
-    addToResponseText("It would probabaly be a word, or a phrase"); 
-    await delay(1000);
-    addToResponseText("Maybe in something he left behind, or gave to you"); 
-    await delay(1000);
-    addToResponseText("If you find it, we'll be here"); 
-    consoleState = consoleStateTypes.IsFinalCodeRight;
-    askFinalCodee = '';
-  }
+
 
   if (askFinalCode === "Immortality") {
     //lots of stuff to add here
