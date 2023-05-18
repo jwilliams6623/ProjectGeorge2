@@ -29,7 +29,7 @@ const consoleStateTypes = {
 let consoleState = consoleStateTypes.Hello;
 
 function scrollToBottom() {
-  //var objDiv = document.getElementById("console-container");
+  var objDiv = document.getElementById("console-container");
   //consoleContainer.scrollToBottom();
   consoleContainer.scrollTop = consoleContainer.scrollHeight;
 }
@@ -80,6 +80,7 @@ window.onload = function () {
 
 function addToResponseText(text, styling) {
   commandHistory.innerHTML += "<div style='" + styling + ";' >" + text + "</div>";
+  scrollToBottom();
 }
 
 // Wait for x miliseconts
