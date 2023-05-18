@@ -4,6 +4,7 @@ body {
 
 .console-page {
     height:95%;
+    
 }
 
 .console-canvas {
@@ -34,13 +35,13 @@ body {
 }
 
 .console-font {
-    color: #00ff08;
+    color: #e0ffe1;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
 }
 
-.command-line-red {
+/* .command-line-red {
     color: #940000 !important
-}
+} */
 
