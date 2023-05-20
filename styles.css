@@ -35,11 +35,12 @@ body {
 }
 
 .console-font {
-    color: #e0ffe1;
+    color: lime;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
 }
+
 
 /* .command-line-red {
     color: #940000 !important
