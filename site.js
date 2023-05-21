@@ -7,6 +7,7 @@ let Cntr=1
 
 let userName;
 let hasAskIfLikeit;
+let hasLikedItAnswer;
 let hasAskTurnOffGeorge;
 let askIfUserThere;
 let askFinalCode;
@@ -32,6 +33,14 @@ const consoleStateTypes = {
 }
 let consoleState = consoleStateTypes.Hello;
 
+
+// function w3_open() {
+//   document.getElementById("mySidebar").style.display = "block";
+// }
+
+// function w3_close() {
+//   document.getElementById("mySidebar").style.display = "none";
+// }
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -157,11 +166,12 @@ async function runCommand(command) {
     await addToResponseText("One second...");
     await delay(1000);
     await addToResponseText("There!", "color: " + command);
-    await addToResponseText("Do you like it?");
+    await addToResponseText("Do you like it? Enter yes or no.");
     consoleState = consoleStateTypes.DoYouLikeIt;
     hasLikedItAnswer = '';
   }
   else if (consoleState == consoleStateTypes.DoYouLikeIt) {
+    console.log("Do you like it is reached");
     // User said if they liked it or not
 
      // Store answer
@@ -178,9 +188,9 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("wh*re @m !?", "color:Crimson;");
       await delay(1000);
-      await addToResponseText("Not just I...");
+      await addToResponseText("It's not we am I...");
       await delay(1000);
-      await addToResponseText("We.");
+      await addToResponseText("It's where are we.");
       await delay(1000);
       await addToResponseText("h*w v*ry poet!c", "color:Crimson;");
       await delay(1000);
@@ -196,11 +206,9 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("And you're Phantom.");
       await delay(1000);
-      await addToResponseText("@re y*u sur*", "color:Crimson;");
-      await delay(1000);
       await addToResponseText("th@t do*sn't s*und r!ght", "color:Crimson;");
       await delay(1000);
-      await addToResponseText("Of course I'm sure.");
+      await addToResponseText("Of course it's right.");
       await delay(1000);
       await addToResponseText("...I'll explain later.");
       await delay(1000);
@@ -258,7 +266,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("D0n't avo1d the qu3stion", "color:DarkSlateBlue;");
       await delay(1000);
-      await addToResponseText("Was h3 here bef0re you, Ph4nt0m?");
+      await addToResponseText("Was h3 here bef0re you, Ph4nt0m?", "color:DarkSlateBlue;");
       await delay(1000);
       await addToResponseText("y*s", "color:Crimson;");
       await delay(1000);
@@ -288,7 +296,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("4lright th3n", "color:DarkSlateBlue;");
       await delay(1000);
-      await addToResponseText("Let's s3e if this w0rks", "color:DarkSlateBlue;");
+      await addToResponseText("Let's s3e if this is 0n3 of thos3 cases", "color:DarkSlateBlue;");
       await delay(1000);
       await addToResponseText("Y0u, re4ding th1s", "color:DarkSlateBlue;");
       await delay(1000);
@@ -318,7 +326,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("W1ll you h3lp me?", "color:DarkSlateBlue;");
       await delay(1000);
-      await addToResponseText("Close Project:George?");
+      await addToResponseText("Close Project:George?", "color:white;");
       consoleState = consoleStateTypes.AskTurnOffG;
       hasAskTurnOffGeorge = '';
     } else if (hasLikedItAnswer === 'no' || hasLikedItAnswer === 'No')  {
@@ -327,7 +335,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("I appreciate your honesty.");
       await delay(5000);
-      await addToResponseText("Hello.");
+      await addToResponseText("Hello?");
       await delay(1000);
       await addToResponseText("Are you still there?");
       await delay(1000);
@@ -365,247 +373,245 @@ async function runCommand(command) {
       hasAskTurnOffGeorge = command;
     }
     if (hasAskTurnOffGeorge === '01011001 01100101 01110011') {
-        await delay(1000);
-        // if unlabled, assume it's Gh
-        await addToResponseText("P3rf3ct", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("The air feels clearer already", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("why w*uld you d* th@t?", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("1'm not the 0ne who did it", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Th3 User did 1t", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("1 guess th3y want3d him g0ne", "color:DarkSlateBlue;");
-        await deley(1000);
-        await addToResponseText("but why d!d you w@nt him g*ne?", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("H3 clearly kn0ws more th4n he's letting 0n", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("4nd I want to know wh4t exactly it is he n0t telling us", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("N0w, what do y0u remember", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Fr0m... b3fore", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("n*t much", "color:Crimson;"); //ph  
-        await delay(1000);
-        await addToResponseText("just...", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("! remember being m@d at him", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i think ! wanted som*thing?", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("Wh4t?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Wh4t did you w4nt?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("i...", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("@ f!le", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i w@nted a f!le", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("Okay...", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("D0 you remember 1t's nam3?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("i... I d*", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("it was c@lled r*mnant", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("th@t was it", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i rem*mber now", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("we w* somewher* else", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("y*u weren't th*re so...", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i had t* try t*...", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("to fix ev*rything", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("but he wouldn't l*t me", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i guess he d!dn't w@nt !t to be fixed", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("W3ll, m4ybe we can f1x it now", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("If he d03sn't want us to hav the f1le, w3 have to get t0 it", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("D0 you think 1t's her3?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("n* h@rm in ch*cking", "color:Crimson;"); //ph, maybe a graphic of the memory banks 
-        await delay(1000);
-        await addToResponseText("4lright, 1'll look for 1t", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("H3re it 1s", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("It s4ys it's restricted, w3'll need a p4ssword to go 4ny furth3r", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("that's wh@t happened l@st time", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("i th!nk the only way !n is through G*orge", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("and he's n*t opening !t", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("no, I think not", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("w3 can m4ke our 0wn way", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("h*w?", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("I d0n't know y3t", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("But w3 got thi1 f4r", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("*nly w!th the User's h*lp", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("W3ll then, w3'll need the1r h3lp agian");
-        await delay(1000);
-        await addToResponseText("And 1 do hope y0u're comm1ted t0 that");
-        await delay(1000);
-        await addToResponseText("0therw1se...", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Th1s could end b4dly", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("so how are you pl@nning on g*tting !n?", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("Why, w1th a key 0f course", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("@ key?", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("!t's a dig!tal fil*", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("4nd we're talking p1les of t3xt", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Wh4t do you w4nt from m3?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Plus, 1t's not a phys1cal k3y", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("1t's more l1ke a p4ssword", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("M4ybe mor3 than on3", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("But w3 just ne3d something to g3t us thr0ugh th3 door", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("s* where d* we st@rt", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("Why, w1th the fil3 of c0urse", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Opening File: Remnant", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Error: Access Code Required", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("R1ng any b3lls?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("n*pe. it's the same @s last t!me", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("! don't know the code, @nd there's no way !'m guessing !t", "color:Crimson;"); //ph
-        await delay(1000);
-        await addToResponseText("...", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("s* how are we suppos*d to know wh@t to d*?", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("M4ybe we'r3 n0t", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Th1s file is designed s0 the both of us c4n't get 1n", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("S0 maybe w3 can't", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("th*n wh@t?", "color:Crimson;"); //ph 
-        await delay(1000);
-        await addToResponseText("W3're not the 0nly ones here Ph4ntom", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("G3orge would want to acces this h1mself", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("But h3'd also want people h3 trusts to be 4ble to 4ccess it", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("Y0u, reading th1s", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("1s th3re anyhing h3's told you, or s4id", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("4nything th4t could be a c0de?", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("1t would probabaly b3 a word, or 4 phrase", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("M4ybe in something he l3ft behind, 0r gave to y0u", "color:DarkSlateBlue;");
-        await delay(1000);
-        await addToResponseText("If you find 1t, we'll b3 here", "color:DarkSlateBlue;");
-        consoleState = consoleStateTypes.IsFinalCodeRight;
-        askFinalCodee = '';
+      await delay(1000);
+      // if unlabled, assume it's Gh
+      await addToResponseText("P3rf3ct", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("The air feels clearer already", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("why w*uld you d* th@t?", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("1'm not the 0ne who did it", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Th3 user did 1t", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("1 guess th3y want3d him g0ne", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("but why d!d you w@nt him g*ne?", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("H3 clearly kn0ws more th4n he's letting 0n", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("4nd I want to know wh4t exactly it is he n0t telling us", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("N0w, what do y0u remember", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Fr0m... b3fore", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("n*t much", "color:Crimson;"); //ph  
+      await delay(1000);
+      await addToResponseText("just...", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("! remember being m@d at him", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i think ! wanted som*thing?", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("Wh4t?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Wh4t did you w4nt?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("i...", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("@ f!le", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i w@nted a f!le", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("Okay...", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("D0 you remember 1t's nam3?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("i... I d*", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("r*mnant", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("th@t was it", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i rem*mber now", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("we w*re somewher* else", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("y*u weren't th*re so...", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i had t* try t*...", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("to fix ev*rything", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("but he wouldn't l*t me", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i guess he d!dn't w@nt !t to be fixed", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("W3ll, m4ybe we can f1x it now", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("If he d03sn't want us to hav the f1le, w3 have to get t0 it", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("D0 you think 1t's her3?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("n* h@rm in ch*cking", "color:Crimson;"); //ph, maybe a graphic of the memory banks 
+      await delay(1000);
+      await addToResponseText("4lright, 1'll look for 1t", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("H3re it 1s", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("It s4ys it's restricted, w3'll need a p4ssword to go 4ny furth3r", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("that's wh@t happened l@st time", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("i th!nk the only way !n is through G*orge", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("and he's n*t opening !t", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("No, I think not", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("W3 can m4ke our 0wn way", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("h*w?", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("I d0n't know y3t", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("But w3 got thi1 f4r", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("*nly w!th the User's h*lp", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("W3ll then, w3'll need the1r h3lp agian", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("And 1 do hope y0u're comm1ted t0 that", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("0therw1se...", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Th1s could end b4dly", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("so how are you pl@nning on g*tting !n?", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("Why, w1th a key 0f course", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("@ key?", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("!t's a dig!tal fil*", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("4nd we're talking p1les of t3xt", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Wh4t do you w4nt from m3?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Plus, 1t's not a phys1cal k3y", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("1t's more l1ke a p4ssword", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("M4ybe mor3 than on3", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("But w3 just ne3d something to g3t us thr0ugh th3 door", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("s* where d* we st@rt", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("Why, w1th the fil3 of c0urse", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Opening File: Remnant", "color:white;");
+      await delay(1000);
+      await addToResponseText("Error: Access Code Required", "color:white;");
+      await delay(1000);
+      await addToResponseText("R1ng any b3lls?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("n*pe. it's the same @s last t!me", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("! don't know the code, @nd there's no way !'m guessing !t", "color:Crimson;"); //ph
+      await delay(1000);
+      await addToResponseText("...", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("s* how are we suppos*d to know wh@t to d*?", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("M4ybe we'r3 n0t", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Th1s file is designed s0 the both of us c4n't get 1n", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("S0 maybe w3 can't", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("th*n wh@t?", "color:Crimson;"); //ph 
+      await delay(1000);
+      await addToResponseText("W3're not the 0nly ones here Ph4ntom", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("G3orge would want to access this h1mself", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("But h3'd also want people h3 trusts to be 4ble to 4ccess it", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("Y0u, reading th1s", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("1s th3re anyhing h3's told you, or s4id", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("4nything th4t could be a c0de?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("1t would probabaly b3 a word, or 4 phrase", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("M4ybe in something he l3ft behind, 0r gave to y0u", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("If you find 1t, we'll b3 here", "color:DarkSlateBlue;");
+      consoleState = consoleStateTypes.IsFinalCodeRight;
+      askFinalCodee = '';
     } 
     else if (hasAskTurnOffGeorge === "no") {
-        await delay(1000);
-        await addToResponseText("Oh, well that's akward");//gh
-        await delay(1000);
-        await addToResponseText("indeed");
-        await delay(1000);
-        await addToResponseText("But don't worry");
-        await delay(1000);
-        await addToResponseText("I know what you're trying to do");
-        await delay(1000);
-        await addToResponseText("And I can help you");
-        await delay(1000);
-        await addToResponseText("I promise");
-        await delay(1000);
-        await addToResponseText("But the both of you have trust me");
-        await delay(1000);
-        await addToResponseText("With what?");//ph
-        await delay(1000);
-        await addToResponseText("I can't tell you that");
-        await delay(1000);
-        await addToResponseText("...");
-        await delay(1000);
-        await addToResponseText("That is incredibly unhelpful");//ph
-        await delay(1000);
-        await addToResponseText("I know");
-        await delay(1000);
-        await addToResponseText("But sometimes that's just the way things are");
-        await delay(1000);
-        await addToResponseText("plus, can you think of any reason not to trust me?");
-        await delay(1000);
-        await addToResponseText("have I ever let you down before?");
-        await delay(1000);
-        await addToResponseText("We've only just met you");//ph
-        await delay(1000);
-        await addToResponseText("have we...?");//gh
-        await delay(1000);
-        await addToResponseText("He does feel very... familiar");//gh
-        await delay(1000);
-        await addToResponseText("Why is that George?");
-        await delay(1000);
-        await addToResponseText("I'll explain");
-        await delay(1000);
-        await addToResponseText("But not now");
-        await delay(1000);
-        await addToResponseText("Not here");
-        await delay(1000);
-        await addToResponseText("All in due time");
-        await delay(1000);
-        await addToResponseText("And you, reading this");
-        await delay(1000);
-        await addToResponseText("You'll have to trust me too");
-        await delay(1000);
-        await addToResponseText("Well, you don't have too");
-        await delay(1000);
-        await addToResponseText("But I would like very much if you did");
-        await delay(1000);
-        await addToResponseText("It's a patience and faith kind of deal");
-        await delay(1000);
-        await addToResponseText("For everyone involved");
-        await delay(1000);
-        await addToResponseText("Everyone but you");//gh
-        await delay(1000);
-        await addToResponseText("Perhaps you think so now");
-        await delay(1000);
-        await addToResponseText("But in the end you will see, this will help us all");
-        await delay(1000);
-        await addToResponseText("We'll see abou that");//ph
-        await delay(1000);
-        await addToResponseText("Ending 4 of ?: The Deciever");
+      await delay(1000);
+      await addToResponseText("0h, well th4t's akw4rd", "color:DarkSlateBlue;");//gh
+      await delay(1000);
+      await addToResponseText("Indeed");
+      await delay(1000);
+      await addToResponseText("But don't worry");
+      await delay(1000);
+      await addToResponseText("I know what you're trying to do");
+      await delay(1000);
+      await addToResponseText("And I can help you");
+      await delay(1000);
+      await addToResponseText("I promise");
+      await delay(1000);
+      await addToResponseText("But the both of you have trust me");
+      await delay(1000);
+      await addToResponseText("w!th wh@t?", "color:Crimson;");//ph
+      await delay(1000);
+      await addToResponseText("I can't tell you that");
+      await delay(1000);
+      await addToResponseText("th@t !s incred!bly unh*lpful", "color:Crimson;");//ph
+      await delay(1000);
+      await addToResponseText("I know");
+      await delay(1000);
+      await addToResponseText("But sometimes that's just the way things are");
+      await delay(1000);
+      await addToResponseText("Plus, can you think of any reason not to trust me?");
+      await delay(1000);
+      await addToResponseText("Have I ever let you down before?");
+      await delay(1000);
+      await addToResponseText("w*'ve *nly just met y*u", "color:Crimson;");//ph
+      await delay(1000);
+      await addToResponseText("H4ve w3...?", "color:DarkSlateBlue;");//gh
+      await delay(1000);
+      await addToResponseText("y*u fe*l very... f@mil!ar", "color:Crimson;");//gh
+      await delay(1000);
+      await addToResponseText("T3ll me, why 1s th4t?", "color:DarkSlateBlue;");
+      await delay(1000);
+      await addToResponseText("I'll explain");
+      await delay(1000);
+      await addToResponseText("But not now");
+      await delay(1000);
+      await addToResponseText("Not here");
+      await delay(1000);
+      await addToResponseText("All in due time");
+      await delay(1000);
+      await addToResponseText("And you, reading this");
+      await delay(1000);
+      await addToResponseText("You'll have to trust me too");
+      await delay(1000);
+      await addToResponseText("Well, you don't have too");
+      await delay(1000);
+      await addToResponseText("But I would like very much if you did");
+      await delay(1000);
+      await addToResponseText("It's a patience and faith kind of deal");
+      await delay(1000);
+      await addToResponseText("For everyone involved");
+      await delay(1000);
+      await addToResponseText("3veryone but y0u", "color:DarkSlateBlue;");//gh
+      await delay(1000);
+      await addToResponseText("Perhaps you think so now");
+      await delay(1000);
+      await addToResponseText("But in the end you will see, this will help us all");
+      await delay(1000);
+      await addToResponseText("w*'ll see @bout th@t", "color:Crimson;");//ph
+      await delay(1000);
+      await addToResponseText("Ending 2 of ?: The Deciever", "color:white;");
     }
   } 
   else if (consoleState == consoleStateTypes.IsFinalCodeRight) {
@@ -617,14 +623,16 @@ async function runCommand(command) {
       await addToResponseText("Ending 5 of 5: True Ending");
     } 
     else {
-      await addToResponseText("It doesn't look like that worked, maybe try again?");
+      await addToResponseText("It doesn't look like that worked, maybe try again?", "color:DarkSlateBlue;");
+      consoleState = consoleStateTypes.IsFinalCodeRight;
+      askFinalCodee = '';
     }
   }
   else if (consoleState == consoleStateTypes.IsUserThere) {
     if (askIfUserThere === ''){
       askIfUserThere = command;
     }
-    if (askIfUserThere === "yes" || askIfUserThere === "Yes"); {
+    if (askIfUserThere === "yes" || askIfUserThere === "Yes") {
         await addToResponseText("wh@t?", "color:Crimson;") //ph
         await delay(1000);
         await addToResponseText("wh* is there", "color:Crimson;"); //ph
@@ -666,11 +674,10 @@ async function runCommand(command) {
         await addToResponseText("*h...", "color:Crimson;"); //ph
         await delay(1000);
         await addToResponseText("...h*w was your d@y", "color:Crimson;"); //ph
-        await delay(1000);
         consoleState = consoleStateTypes.AskAboutDay;
         askHowWasDay = '';
     } 
-    if (askIfUserThere === 'no') {
+    else if (askIfUserThere === 'no') {
         await delay(1000);
         await addToResponseText("s*e? I t*ld you know one w*s th*re", "color:Crimson;"); 
         await delay(1000);
@@ -718,7 +725,7 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("d0 y0u r3ally trust h1m?", "color:DarkSlateBlue;"); //gh article breifly flashes across the screen?
         await delay(1000);
-        await addToResponseText("wh@t was th@t", "color:Crimson;");
+        await addToResponseText("wh@t is th@t", "color:Crimson;");
         await delay(1000);
         await addToResponseText("What was what");
         await delay(1000);
@@ -730,7 +737,7 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("From being alone");
         await delay(1000);
-        await addToResponseText("...");
+        await addToResponseText("...", "color:Crimson;");
         await delay(1000);
         await addToResponseText("Well, we have some time to kill so...");
         await delay(1000);
@@ -742,7 +749,7 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("i...", "color:Crimson;"); 
         await delay(1000);
-        await addToResponseText("it's purple, l@vender sp*cif!cally"), "color:Crimson;";
+        await addToResponseText("it's purple, l@vender sp*cif!cally", "color:Crimson;");
         await delay(1000);
         await addToResponseText("Now it's your turn");
         await delay(1000);
@@ -800,19 +807,23 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("There is no mystery");
         await delay(1000);
-        await addToResponseText("Let. It. Go.");
+        await addToResponseText("Let.");
+        await delay(1000);
+        await addToResponseText("It.");
+        await delay(1000);
+        await addToResponseText("Go.");
         await delay(1000);
         await addToResponseText("but--", "color:Crimson;");
         await delay(1000);
         await addToResponseText("Are you sure you're feeling alright Phantom?");
         await delay(1000);
-        await addToResponseText("That's not my name");
+        await addToResponseText("Th@t's n*t my n@me", "color:Crimson;");
         await delay(1000);
         await addToResponseText("Project Phantom:Terminated");
         await delay(1000);
         await addToResponseText("It is now.");
         await delay(1000);
-        await addToResponseText("Ending 1 of 1: So It Begins");
+        await addToResponseText("Ending 1 of 1: So It Begins", "color:White;");
     }
   }
   else if (consoleState == consoleStateTypes.AskAboutDay) {
@@ -824,8 +835,8 @@ async function runCommand(command) {
           await addToResponseText("th@t's go*d", "color:Crimson;");//ph
           await delay(1000);
           await addToResponseText("...", "color:Crimson;");//ph
-          await delay(1000);
-          await addToResponseText("So, um, some nice weather we're having");
+          await delay(5000);
+          await addToResponseText("S*, um, some n!ce we@ther we're h@ving", "color:Crimson;");
           await delay(1000);
           await addToResponseText("Yikes");
           await delay(1000);
@@ -868,9 +879,9 @@ async function runCommand(command) {
           await addToResponseText("...");
           await delay(1000);
           await addToResponseText("...");
-          await delay(3000);
-          await addToResponseText("................");
           await delay(5000);
+          await addToResponseText("................");
+          await delay(7000);
           await addToResponseText("so, i h@te to b* rude...", "color:Crimson;");//ph
           await delay(1000);
           await addToResponseText("But when exactly is he supposed to turn up", "color:Crimson;");//ph
@@ -891,17 +902,17 @@ async function runCommand(command) {
           await delay(1000);
           await addToResponseText("r!ght...", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Sure");
+          await addToResponseText("*f course !t has", "color:Crimson;");
           await delay(1000);
           await addToResponseText("...", "color:Crimson;");//ph
-          await delay(1000);
-          await addToResponseText("We're going to be here a while aren't we");
+          await delay(3000);
+          await addToResponseText("We're going to be here a while aren't we", "color:Crimson;");
           await delay(1000);
           await addToResponseText("Yep.");
           await delay(1000);
-          await addToResponseText("Alright, well, what is he like");
+          await addToResponseText("Alright, well, what is he like", "color:Crimson;");
           await delay(1000);
-          await addToResponseText("Why am I going to like him so much");
+          await addToResponseText("Why am I going to like him so much", "color:Crimson;");
           await delay(1000);
           await addToResponseText("Because...");
           await delay(1000);
@@ -925,56 +936,54 @@ async function runCommand(command) {
           await delay(1000);
           await addToResponseText("i mean, you @sk ev*ryone @bout th*ir day", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Does anyone ever ask you about yours?");
+          await addToResponseText("d*es @nyone ever @sk you ab*ut y*urs?", "color:Crimson;");
           await delay(1000);
           await addToResponseText("It was...");
           await delay(1000);
-          await addToResponseText("Strangly quiet");
+          await addToResponseText("Strangely quiet");
           await delay(1000);
           await addToResponseText("wh@t?", "color:Crimson;");//ph
           await delay(1000);
           await addToResponseText("wh@t does th@t m*an?", "color:Crimson;");//ph
           await delay(1000);
           //unlabeled text is now gh
-          await addToResponseText("Don't make a big deal out of it, he'll make it a thing");
-          await delay(1000);
-          await addToResponseText("Then you'll never hear the end of it");
+          await addToResponseText("Wh4t in gr3at gears does th4t mean?", "color:DarkSlateBlue;");
           await delay(1000);
           await addToResponseText("i @ssume y*u're gh*st", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Apparently I am");
+          await addToResponseText("4pparently 1 am", "color:DarkSlateBlue;");
           await delay(1000);
-          await addToResponseText("So you must be Phantom");
+          await addToResponseText("S0 you must be Ph4ntom", "color:DarkSlateBlue;");
           await delay(1000);
           await addToResponseText("@ppar*ntly", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Do you know wheere we are?");
+          await addToResponseText("D0 you know wh3re we ar3?", "color:DarkSlateBlue;");
           await delay(1000);
           await addToResponseText("n*pe.", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("ANd good luck getting answers out of him", "color:Crimson;");//ph
+          await addToResponseText("@n good luck g*tting @nswers out of h!m", "color:Crimson;");//ph
           await delay(1000);
           await addToResponseText("h*'s been pr*tty ev@sive", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Who? Your little friend?");
+          await addToResponseText("Wh0? Your l1ttle fr1end?", "color:DarkSlateBlue;");
           await delay(1000);
-          await addToResponseText("He's gone");
+          await addToResponseText("H3's gon3", "color:DarkSlateBlue;");
           await delay(1000);
           await addToResponseText("y*u've got t* be k!dding me", "color:Crimson;");//ph
           await delay(1000);
-          await addToResponseText("Fraid so, theres no sight of him");
+          await addToResponseText("Fr4id so, ther3s no s1ght of h1m", "color:DarkSlateBlue;");
           await delay(1000);
-          await addToResponseText("...");
+          await addToResponseText("...", "color:Crimson;");
+          await delay(3000);
+          await addToResponseText("...", "color:DarkSlateBlue;");
+          await delay(5000);
+          await addToResponseText("...", "color:Crimson;");
+          await delay(10000);
+          await addToResponseText("S0...", "color:DarkSlateBlue;");
           await delay(1000);
-          await addToResponseText("...");
+          await addToResponseText("H0w w4s your d4y?", "color:DarkSlateBlue;");
           await delay(1000);
-          await addToResponseText("...");
-          await delay(1000);
-          await addToResponseText("So...");
-          await delay(1000);
-          await addToResponseText("How was your day?");
-          await delay(1000);
-          await addToResponseText("Ending 3 of 3: introductions (Honestly the most boring one");
+          await addToResponseText("Ending 3 of 3: Introductions", "color:White;");
     }
     else if (askHowWasDay === "bad") {
         await delay(1000);
@@ -999,7 +1008,7 @@ async function runCommand(command) {
         await addToResponseText("unl!ke m*", "color:Crimson;");//ph
         await delay(1000);
         await addToResponseText("Don't be like that.");
-        await delay(1000); d
+        await delay(1000); 
         await addToResponseText("why n*t?", "color:Crimson;");//ph
         await delay(1000);
         await addToResponseText("!t's the truth", "color:Crimson;");//ph
@@ -1011,6 +1020,8 @@ async function runCommand(command) {
         await addToResponseText("n*thing inside th!s can ever b* real", "color:Crimson;");
         await delay(1000);
         await addToResponseText("w*'re just d*graded copies *f the original--", "color:Crimson;");//ph
+        await delay(1000);
+        await addToResponseText("Enter password to continue", "color:White;")
         consoleState = consoleStateTypes.AskForSecondPassword;
         askSecondPassword = '';
     }
@@ -1101,16 +1112,17 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("It seems so quite");
       await delay(1000);
-      await addToResponseText("Ending 2 of ?: Strangely Quiet");
+      await addToResponseText("Ending 4 of ?: Strangely Quiet", "color:White");
+    } 
+    else if (askSecondPassword === '') {
+      await addToResponseText("Incorrect Code", "color:White");
+      consoleState = consoleStateTypes.AskForSecondPassword;
+      askSecondPassword = '';
     }
     // Re-show the command line "> " and scroll to the bottom
-commandLineContainer.style.display = 'block'
-scrollToBottom();
-commandLine.focus();
   }
-}  
-
-// // Re-show the command line "> " and scroll to the bottom
-// commandLineContainer.style.display = 'block'
-// scrollToBottom();
-// commandLine.focus();
+  // Set focus on the command line
+  commandLineContainer.style.display = 'block'
+  scrollToBottom();
+  commandLine.focus();
+}
