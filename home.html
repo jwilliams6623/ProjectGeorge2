@@ -1,10 +1,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
     <script src="site.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- <div class="sidebar" style="display:none" id="mySidebar">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <div><a href="#" class="button">Memory Files</a></div>
+      <div><a href="#" class="button">Chapters</a></div>
+      <div><a href="#" class="button">Puzzles</a></div>
+      <div><a href="#" class="button">About</a></div>
+    </div>
+    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button> -->
     <div class="console-page">
       <div id="console-container" class="console-canvas console-font">
         <div id="command-history"> <h1> Welcome to the <s>End</s> Beginning</h1>
@@ -41,32 +51,6 @@
         <div id="div1">
              <p>Hello</p>
         </div>
-       
-        <script>
-            function tallyKeeper() {
-                tally++;
-                if (tally === 1 && tally <= 2){
-                    const para = document.createElement("p"); 
-                    const node = document.createTextNode("I am George");
-                    para.appendChild(node);
-                    const element = document.getElementById("div1");
-                    element.appendChild(para);
-                    console.log("I am George");
-                }
-                if (tally === 2 && tally <= 3){
-                    const para = document.createElement("p"); 
-                    const node = document.createTextNode("Who are you?");
-                    para.appendChild(node);
-                    const element = document.getElementById("div1");
-                    element.appendChild(para);
-                    console.log("Who are you?");
-                }
-                if (tally === 3 && tally <= 4){
-                    console.log("Who are you?")
-                } 
-            }
-            </script>
-
     </body>
 </html>
   -->

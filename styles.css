@@ -35,11 +35,17 @@ body {
 }
 
 .console-font {
-    color: #e0ffe1;
+    color: lime;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
 }
+
+/* mySidebar {
+    color:rgb(9, 46, 6);
+    background-color: #ddfddd;
+    font-family: 'Times New Roman', Times, serif;
+} */
 
 /* .command-line-red {
     color: #940000 !important
