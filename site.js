@@ -124,7 +124,7 @@ async function writeResponseSlowly(responseDivId, text) {
   responseLine.innerHTML += text.substring(0, 1); // write first character in the string;
   scrollToBottom();
 
-  await delay(30);
+  await delay(20);
 
   await writeResponseSlowly(responseDivId, text.substring(1, text.length)); // remove the first character and call the function again
 }
@@ -543,7 +543,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("If you find 1t, we'll b3 here", "color:DarkSlateBlue;");
       consoleState = consoleStateTypes.IsFinalCodeRight;
-      askFinalCodee = '';
+      askFinalCode = '';
     } 
     else if (hasAskTurnOffGeorge === "no") {
       await delay(1000);
@@ -618,6 +618,7 @@ async function runCommand(command) {
     if (hasLikedItAnswer === '') {
       hasLikedItAnswer = command;
     }
+    
     if (askFinalCode === "Immortality") {
       //lots of stuff to add here
       await addToResponseText("Ending 5 of 5: True Ending");
@@ -625,7 +626,7 @@ async function runCommand(command) {
     else {
       await addToResponseText("It doesn't look like that worked, maybe try again?", "color:DarkSlateBlue;");
       consoleState = consoleStateTypes.IsFinalCodeRight;
-      askFinalCodee = '';
+      askFinalCode = '';
     }
   }
   else if (consoleState == consoleStateTypes.IsUserThere) {
