@@ -83,10 +83,6 @@ window.onload = function () {
     commandLine.focus();
   })
 
-  // DEBUG: DELETE THESE LINES
-  consoleState = consoleStateTypes.AskAboutDay
-  // END DEBUG
-
   commandLine.addEventListener("keypress", async (e) => {
     if (e.keyCode == 13) {  // If they press enter
       e.preventDefault();
