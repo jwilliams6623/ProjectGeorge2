@@ -83,6 +83,8 @@ window.onload = function () {
     commandLine.focus();
   })
 
+  consoleState = consoleStateTypes.AskWhoAreYou;
+
   commandLine.addEventListener("keypress", async (e) => {
     if (e.keyCode == 13) {  // If they press enter
       e.preventDefault();
