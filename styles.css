@@ -19,7 +19,7 @@ body {
 }
 
 #command-line, #command-line:focus {
-    width: 565px;
+    /* width: 565px; */
     color: #00ff08;
     background-color: #000;
     border: none;
@@ -34,11 +34,30 @@ body {
     outline: none;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 .console-font {
     color: lime;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
+}
+
+@media (max-width: 700px) {
+    .console-font {
+        font-size: 16pt;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #command-line, #command-line:focus {
+        width:inherit;
+    }
+    .console-canvas {
+        width: 90%
+    }
 }
 
 /* mySidebar {
