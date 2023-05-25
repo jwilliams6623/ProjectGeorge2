@@ -33,14 +33,15 @@ const consoleStateTypes = {
 }
 let consoleState = consoleStateTypes.Hello;
 
+/* Set the width of the side navigation to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
 
-// function w3_open() {
-//   document.getElementById("mySidebar").style.display = "block";
-// }
-
-// function w3_close() {
-//   document.getElementById("mySidebar").style.display = "none";
-// }
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -137,7 +138,6 @@ function delay(milliseconds) {
 // Main code to manage what happens when a user enters text.
 // Most of user interaction logic should live here (or in a sub method)
 async function runCommand(command) {
-
   // Handle commands based on the current page 'state'
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
     // User just entered their name, so I will...
@@ -184,7 +184,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("I have another question for you.");
       await delay(1000);
-      await addToResponseText("wh@t !s th!s plac*", "color:Crimson;"); //add in more flare here, ph's entrance
+      await addToResponseText("wh@t !s th!s plac*", "color:Crimson;");
       await delay(1000);
       await addToResponseText("wh*re @m !?", "color:Crimson;");
       await delay(1000);
@@ -620,10 +620,12 @@ async function runCommand(command) {
     }
     
     if (askFinalCode === "Immortality") {
-      //lots of stuff to add here
-      await addToResponseText("Ending 5 of 5: True Ending");
+      await delay(1000);
+      await addToResponseText("File: Remanant Opening", "color:white;"); 
+      await delay(1000);
+      await addToResponseText("Ending 5 of 5: True Ending", "color:white;");
     } 
-    else {
+    else if (askFinalCode === '') {
       await addToResponseText("It doesn't look like that worked, maybe try again?", "color:DarkSlateBlue;");
       consoleState = consoleStateTypes.IsFinalCodeRight;
       askFinalCode = '';
@@ -1031,7 +1033,7 @@ async function runCommand(command) {
     if (askSecondPassword === ''){
       askSecondPassword = command;
     }
-    if (askSecondpassword === "1234") {
+    if (askSecondpassword === "James") {
       await delay(1000);
       await addToResponseText("No");
       await delay(1000);

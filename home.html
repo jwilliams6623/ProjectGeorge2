@@ -7,15 +7,18 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- <div class="sidebar" style="display:none" id="mySidebar">
-      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-      <div><a href="#" class="button">Memory Files</a></div>
-      <div><a href="#" class="button">Chapters</a></div>
-      <div><a href="#" class="button">Puzzles</a></div>
-      <div><a href="#" class="button">About</a></div>
-    </div>
-    <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">☰</button> -->
     <div class="console-page">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">Memory Files</a>
+        <a href="#">Chapter 1</a>
+        <a href="#">Chapter 2</a>
+        <a href="#">Chapter 3</a>
+        <a href="#">Archives</a>
+        <a href="#">Puzzles</a>
+        <a href="#">About</a>
+      </div>
+      <h2 style ="color:white" onclick="openNav()">Menu</h2>
       <div id="console-container" class="console-canvas console-font">
         <div id="command-history"> <h1> Welcome to the <s>End</s> Beginning</h1>
           <div id ="p1">Hello.</div>
