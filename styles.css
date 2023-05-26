@@ -34,11 +34,30 @@ body {
     outline: none;
 }
 
+h1 {
+    font-size: 1.5em;
+}
+
 .console-font {
     color: #00ff9f;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
+}
+
+@media (max-width: 700px) {
+    .console-font {
+        font-size: 14pt;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #command-line, #command-line:focus {
+        width:inherit;
+    }
+    .console-canvas {
+        width: 90%
+    }
 }
 
 /* mySidebar {
