@@ -8,7 +8,7 @@ body {
 }
 
 .console-canvas {
-    border: solid 1px #00ff08;
+    border: solid 1px #00ff9f;
     background: #000000;
     width: 600px;
     margin: 20px auto 5px auto; 
@@ -20,7 +20,7 @@ body {
 
 #command-line, #command-line:focus {
     width: 565px;
-    color: #00ff08;
+    color: #00ff9f;
     background-color: #000000;
     border: none;
     padding: 0px 0px 0px 0px;
@@ -35,7 +35,7 @@ body {
 }
 
 .console-font {
-    color: lime;
+    color: #00ff9f;
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
@@ -78,7 +78,7 @@ body {
   
   /* When you mouse over the navigation links, change their color */
   .sidenav a:hover {
-    color: #19c713;
+    color: #00ff9f;
   }
   
   /* Position and style the close button (top right corner) */
