@@ -125,7 +125,7 @@ async function writeResponseSlowly(responseDivId, text) {
   responseLine.innerHTML += text.substring(0, 1); // write first character in the string;
   scrollToBottom();
 
-  await delay(20);
+  await delay(40);
 
   await writeResponseSlowly(responseDivId, text.substring(1, text.length)); // remove the first character and call the function again
 }
@@ -151,7 +151,6 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Let's see...");
     await delay(1000);
-
     await addToResponseText("What's your favorite color?");
     consoleState = consoleStateTypes.AskFavoriteColor;
   }
