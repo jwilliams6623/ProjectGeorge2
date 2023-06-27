@@ -174,10 +174,12 @@ async function runCommand(command) {
     // User said if they liked it or not
 
      // Store answer
-    if (hasLikedItAnswer === '') {
-      hasLikedItAnswer = command;
-    }
-    if (hasLikedItAnswer === 'yes' || hasLikedItAnswer === 'Yes') {
+    // if (hasLikedItAnswer === '') {
+    //   hasLikedItAnswer = command;
+    // }
+    hasLikedItAnswer = command;
+
+    if (hasLikedItAnswer.toLowerCase() === 'yes') {
       // User liked it
       await addToResponseText("Oh that's wonderful");
       await delay(1000);
@@ -328,7 +330,7 @@ async function runCommand(command) {
       await addToResponseText("Close Project:George?", "color:white;");
       consoleState = consoleStateTypes.AskTurnOffG;
       hasAskTurnOffGeorge = '';
-    } else if (hasLikedItAnswer === 'no' || hasLikedItAnswer === 'No')  {
+    } else if (hasLikedItAnswer.toLowerCase() === 'no')  {
       // User did not like it
       await addToResponseText("Well, that's alright.");
       await delay(1000);
@@ -365,12 +367,16 @@ async function runCommand(command) {
       await addToResponseText("Is there anyone... here?");
       consoleState = consoleStateTypes.IsUserThere;
       askIfUserThere = '';
+    } 
+    else {
+      await delay(1000);
+      await addToResponseText("Do you like it? Enter yes or no.");
+      consoleState = consoleStateTypes.DoYouLikeIt;
     }
   }
   else if (consoleState == consoleStateTypes.AskTurnOffG) {
-    if (hasAskTurnOffGeorge === ''){
-      hasAskTurnOffGeorge = command;
-    }
+    hasAskTurnOffGeorge = command.toLowerCase();
+
     if (hasAskTurnOffGeorge === '01011001 01100101 01110011') {
       await delay(1000);
       // if unlabled, assume it's Gh
@@ -612,13 +618,15 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Ending 2 of ?: The Deciever", "color:white;");
     }
+    else {
+      await delay(1000);
+      await addToResponseText("Do you like it? Enter yes or no.");
+    }
   } 
   else if (consoleState == consoleStateTypes.IsFinalCodeRight) {
-    if (hasLikedItAnswer === '') {
-      hasLikedItAnswer = command;
-    }
+    hasLikedItAnswer = command.toLowerCase();
     
-    if (askFinalCode === "Immortality") {
+    if (askFinalCode.toLowerCase() === "immortality") {
       await delay(1000);
       await addToResponseText("File: Remanant Opening", "color:white;"); 
       await delay(1000);
@@ -634,7 +642,7 @@ async function runCommand(command) {
     if (askIfUserThere === ''){
       askIfUserThere = command;
     }
-    if (askIfUserThere === "yes" || askIfUserThere === "Yes") {
+    if (askIfUserThere.toLowerCase() === "yes") {
         await addToResponseText("wh@t?", "color:#001eff") //ph
         await delay(1000);
         await addToResponseText("wh* is there", "color:#001eff"); //ph
@@ -679,7 +687,7 @@ async function runCommand(command) {
         consoleState = consoleStateTypes.AskAboutDay;
         askHowWasDay = '';
     } 
-    else if (askIfUserThere === 'no') {
+    else if (askIfUserThere.toLowerCase() === 'no') {
         await delay(1000);
         await addToResponseText("s*e? I t*ld you know one w*s th*re", "color:#001eff"); 
         await delay(1000);
@@ -827,11 +835,14 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("Ending 1 of 1: So It Begins", "color:White;");
     }
+    else {
+      delay(1000);
+      await addToResponseText("Is there anyone... here?");
+    }
   }
   else if (consoleState == consoleStateTypes.AskAboutDay) {
-    if (askHowWasDay === ''){
-      askHowWasDay = command;
-    }
+    askHowWasDay = command.toLowerCase();
+    
     if (askHowWasDay === "good") {
           await delay(1000);
           await addToResponseText("th@t's go*d", "color:#001eff");//ph
@@ -1025,14 +1036,17 @@ async function runCommand(command) {
         await delay(1000);
         await addToResponseText("Enter password to continue", "color:White;")
         consoleState = consoleStateTypes.AskForSecondPassword;
-        askSecondPassword = '';
+        //askSecondPassword = '';
+    } 
+    else {
+      await addToResponseText("...h*w was your d@y", "color:Crimson;"); //ph
+      consoleState = consoleStateTypes.AskForSecondPassword;
     }
   }
-  else if (console.state == consoleStateTypes.AskForSecondPassword) {
-    if (askSecondPassword === ''){
-      askSecondPassword = command;
-    }
-    if (askSecondpassword === "James") {
+  else if (consoleState == consoleStateTypes.AskForSecondPassword) {
+    askSecondPassword = command.toLowerCase();
+
+    if (askSecondPassword === "James") {
       await delay(1000);
       await addToResponseText("No");
       await delay(1000);
@@ -1116,13 +1130,14 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Ending 4 of ?: Strangely Quiet", "color:White");
     } 
-    else if (askSecondPassword === '') {
+    else { //if (askSecondPassword === '') {
       await addToResponseText("Incorrect Code", "color:White");
+      await delay(1000);
+      await addToResponseText("Enter password to continue", "color:White;")
       consoleState = consoleStateTypes.AskForSecondPassword;
-      askSecondPassword = '';
     }
-    // Re-show the command line "> " and scroll to the bottom
   }
+  
   // Set focus on the command line
   commandLineContainer.style.display = 'block'
   scrollToBottom();
