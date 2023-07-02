@@ -75,7 +75,6 @@ async function handleCommand(command) {
 }
 
 window.onload = function () {
-  
   commandLine = document.querySelector("#command-line");
   commandHistory = document.querySelector("#command-history");
   commandLineContainer = document.querySelector("#command-line-container");
@@ -131,11 +130,6 @@ async function writeResponseSlowly(responseDivId, text) {
   await writeResponseSlowly(responseDivId, text.substring(1, text.length)); // remove the first character and call the function again
 }
 
-function onClick()
-{
-  Cookies.set('progress', '1');
-}
-
 // Wait for x miliseconts
 function delay(milliseconds) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
@@ -147,8 +141,7 @@ async function runCommand(command) {
   // Handle commands based on the current page 'state'
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
     // User just entered their name, so I will...
-    Cookies.set("currentuser", command);
-    await addToResponseText("It's nice to meet you " + Cookies.get('currmentuser'), + ".");
+    await addToResponseText("It's nice to meet you " + command, + ".");
     await delay(1000);
     await addToResponseText("I can't believe this is actually working.", "color:");
     await delay(1000);
