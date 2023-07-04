@@ -56,6 +56,33 @@ h1 {
     display: none;
 }
 
+
+.remnants-title {
+    font-size: 30px;
+    color:rgb(77, 230, 123); 
+    text-shadow: 2px 2px rgb(166, 19, 211); 
+    font-family: blueScreenFont;
+    font-weight: bolder;
+    text-align:center
+}
+
+.remnants-canvas {
+    border: solid 2px #ffffff;
+    background: #000000;
+    width: 600px;
+    margin: 20px auto 5px auto; 
+    padding: 4px;
+    overflow-y: scroll; 
+    height: 100%;
+}
+
+.remnants-font {
+    color: #ffffff;
+    background-color: #000000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font: size 15px;pt;
+}
+
 @media (max-width: 700px) {
     .console-font {
         font-size: 14pt;
@@ -132,5 +159,7 @@ h1 {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+
 
  
