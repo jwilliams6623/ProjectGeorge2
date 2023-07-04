@@ -15,7 +15,7 @@ body {
     padding: 4px;
     overflow-y: scroll; 
     height: 100%;
-    
+
 }
 
 #command-line, #command-line:focus {
@@ -43,6 +43,17 @@ h1 {
     background-color: #000;
     font-family: 'Courier New', Courier, monospace;
     font-size:10pt;
+}
+
+.calculator-canvas {
+    border: solid 10px rgb(59, 59, 59);
+    background: white;
+    width: 450px;
+    margin: 50px auto 50px auto;
+    padding: 4px;
+    height: 30%;
+    border-radius: 25px;
+    display: none;
 }
 
 @media (max-width: 700px) {
