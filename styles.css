@@ -80,8 +80,82 @@ h1 {
     color: #ffffff;
     background-color: #000000;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font: size 15px;pt;
+    font: size 15px;
 }
+
+.phantom-title {
+    color: #aeb8ff;
+    font-size: 100px;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: bold;
+    transition: 0.5s;
+    display: inline-block;
+    text-align: center;
+    margin-left:150px;
+    margin-right:100px;
+    vertical-align: top;
+}
+.phantom-title:hover {
+    text-shadow:3px 3px 50px #001eff;
+}
+.phantom-info {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: left;
+    width: 250px;
+}
+
+.george-title {
+    color: #a7ffdd;
+    font-size: 100px;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: bold;
+    text-shadow:3px 3px #005e3a;
+    transition: 0.5s;
+    display: inline-block;
+    text-align: left;
+    margin-left:250px;
+    margin-right:100px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+.george-title:hover {
+    text-shadow:3px 3px 50px #00ff9f;
+}
+.george-info {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-top: 15px;
+    width: 250px;
+}
+
+.ghost-title {
+    color: #f3b7ff;
+    font-size: 100px;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: bold;
+    text-shadow:3px 3px #4b025a;
+    transition: 0.5s;
+    display: inline-block;
+    text-align: right;
+    margin-left:98px;
+    margin-right:250px;
+    margin-top: 50px;
+    vertical-align: top;
+}
+.ghost-title:hover {
+    text-shadow:3px 3px 50px #d600ff;
+}
+.ghost-info {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 20px;
+    margin-top: 15px;
+    text-align: left;
+    width: 250px;
+}
+
+
 
 @media (max-width: 700px) {
     .console-font {
