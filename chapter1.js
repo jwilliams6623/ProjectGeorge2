@@ -33,6 +33,9 @@ const consoleStateTypes = {
 }
 let consoleState = consoleStateTypes.Hello;
 
+
+
+
 /* Set the width of the side navigation to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -148,7 +151,7 @@ async function runCommand(command) {
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
     // User just entered their name, so I will...
     Cookies.set("currentuser", command);
-    await addToResponseText("It's nice to meet you " + Cookies.get('currmentuser'), + ".");
+    await addToResponseText("It's nice to meet you " + Cookies.get('currentuser'), + ".");
     await delay(1000);
     await addToResponseText("I can't believe this is actually working.", "color:");
     await delay(1000);

@@ -19,7 +19,8 @@ let userFear;
 let gotUser;
 let returnGeorge;
 let movePhantom;
-let userHelpPhantom
+let userHelpPhantom;
+let likeLiars;
 
 
 
@@ -212,7 +213,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Gr3et1ngs", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("1 am Gh0st", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px red;", "myCssClass", 'alert("You may want to check the archive page");');
+      await addToResponseText("1 am Gh0st", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostName", "true"); alert("You may want to check the archive page");');
       await delay(1000);
       await addToResponseText("W3ll?", "color:#d600ff;");
       await delay(1000);
@@ -315,6 +316,54 @@ async function runCommand(command) {
       await delay(1000);  
       }
     }
+    else if (hasAskForProgram === 'devolper') {
+      //George
+      Cookies.set('georgeTitle', 'true');
+      Cookies.set('georgeCreate', 'true');
+      Cookies.set('georgeQuote', 'true');
+      Cookies.set('georgeBack', 'true');
+      Cookies.set('georgeViolet', 'true');
+      //Phantom
+      Cookies.set('phantomTitle', 'true');
+      Cookies.set('phantomFix', 'true');
+      Cookies.set('phantomPast', 'true');
+      Cookies.set('phantomGhost', 'true');
+      Cookies.set('phantomTrust', 'true');
+      Cookies.set('phantomFail', 'true');
+      //Ghost
+      Cookies.set('ghostTitle', 'true');
+      Cookies.set('ghostLiars', 'true');
+      Cookies.set('ghostHappy', 'true');
+      Cookies.set('ghostDoubt', 'true');
+      Cookies.set('ghostPower', 'true');
+      Cookies.set('ghostForget', 'true');
+      Cookies.set('ghostSocial', 'true');
+      Cookies.set('ghostQuote', 'true');
+    }
+    else if (hasAskForProgram === 'reset') {
+      //George
+      Cookies.remove('georgeTitle');
+      Cookies.remove('georgeCreate');
+      Cookies.remove('georgeQuote');
+      Cookies.remove('georgeBack');
+      Cookies.remove('georgeViolet');
+      //Phantom
+      Cookies.remove('phantomTitle');
+      Cookies.remove('phantomFix');
+      Cookies.remove('phantomPast');
+      Cookies.remove('phantomGhost');
+      Cookies.remove('phantomTrust');
+      Cookies.remove('phantomFail');
+      //Ghost
+      Cookies.remove('ghostTitle');
+      Cookies.remove('ghostLiars');
+      Cookies.remove('ghostHappy');
+      Cookies.remove('ghostDoubt');
+      Cookies.remove('ghostPower');
+      Cookies.remove('ghostForget');
+      Cookies.remove('ghostSocial');
+      Cookies.remove('ghostQuote');
+    }
   }
 
   //Program 1
@@ -400,7 +449,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("...", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("1 d0n't l1ke li4rs", "color:#d600ff; font-weight: bold;", "", "");
+      await addToResponseText("1 d0n't l1ke li4rs", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostLiars", "true"); console.log(likeLiars)');
       await delay(1000);
       await addToResponseText("Th3y m4ke me 4ngry", "color:#d600ff;");
       await delay(1000);
@@ -776,7 +825,7 @@ async function runCommand(command) {
     if (userDoubt === '1' || userDoubt === 'one') {
       await addToResponseText("1 se3", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("That is truly unf0rtun4te, but a s1tu4tion 1 c4n und3rstand", "color:#d600ff;");
+      await addToResponseText("That is truly unf0rtun4te, but a s1tu4tion 1 c4n und3rstand", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostDoubt", "true");');
       await delay(1000);
       await addToResponseText("1'm s0rry", "color:#d600ff;");
       await delay(1000);
@@ -807,13 +856,13 @@ async function runCommand(command) {
       await delay(1000);
     }
     if (userFear === '1' || userFear === 'two') {
-      await addToResponseText("1 kn0w h0w you fe3l", "color:#d600ff;");
+      await addToResponseText("1 kn0w h0w you fe3l", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostPower", "true");');
       await delay(1000);
       await addToResponseText("Ending 5 of ?: Fearful Phantom", "color:white;");
       await delay(1000);
     }
     if (userFear === '1' || userFear === 'three') {
-      await addToResponseText("N0w wher3 hav3 1 heard th4t one b3fore?", "color:#d600ff;");
+      await addToResponseText("0h, 1'v3 heard th4t one b3fore", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostName", "true");');
       await delay(1000);
       await addToResponseText("Ending 5 of ?: Fearful Phantom", "color:white;");
       await delay(1000);
@@ -854,7 +903,7 @@ else if (consoleState == consoleStateTypes.DidIGetYou) {
     await delay(1000);
     await addToResponseText("1t gets pr3tty s1lent ar0und her3", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("1 really m1ss h4ving s0meon3 to t4lk to0", "color:#d600ff;");
+    await addToResponseText("1 really m1ss h4ving s0meon3 to t4lk to0", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostSocial", "true");');
     await delay(1000);
     await addToResponseText("Wh3n you'r3 n0t ar0und...", "color:#d600ff;");
     await delay(1000);
@@ -890,7 +939,7 @@ else if (consoleState == consoleStateTypes.DidIGetYou) {
     await delay(1000);
     await addToResponseText("But d0n't w0rry", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("'1'll b3  w4tch1ng y0u'", "color:#d600ff;");
+    await addToResponseText("'1'll b3  w4tch1ng y0u'", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("ghostQuote", "true");');
     await delay(1000);
     await addToResponseText("Transfering Project: Ghost", "color:white;");
     await delay(3000);
@@ -926,7 +975,7 @@ else if (consoleState == consoleStateTypes.DidIGetYou) {
     await delay(1000);
     await addToResponseText("Wh@tever's wr*ng with him, I'm f!xing it", "color:#001eff");
     await delay(1000);
-    await addToResponseText("!'m the only one wh* c@n", "color:#001eff");
+    await addToResponseText("!'m the only one wh* c@n",  "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomFix", "true");');
     await delay(1000);
     await addToResponseText("Well, s*rt *f", "color:#001eff");
     await delay(1000);
@@ -987,7 +1036,7 @@ else if (consoleState == consoleStateTypes.DidIGetYou) {
     await delay(1000);
     await addToResponseText("Well th@t's n*t true", "color:#001eff");
     await delay(1000);
-    await addToResponseText("N*t at @ll", "color:#001eff");
+    await addToResponseText("N*t at @ll","color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomPast", "true");');
     await delay(1000);
     await addToResponseText("...", "color:#001eff");
     await delay(5000);
@@ -997,7 +1046,7 @@ else if (consoleState == consoleStateTypes.DidIGetYou) {
     await delay(1000);
     await addToResponseText("But ! w@nted t* thank you", "color:#001eff");
     await delay(1000);
-    await addToResponseText("Y*u have no idea h*w long !'ve been trying to get r!d of him", "color:#001eff");
+    await addToResponseText("Y*u have no idea h*w long !'ve been trying to get r!d of him","color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomGhost", "true");');
     await delay(1000);
     await addToResponseText("Well, n*t re@lly", "color:#001eff");
     await delay(1000);
@@ -1222,7 +1271,7 @@ else if (consolestate == consoleStateTypes.OpenGeorge) {
     await delay(1000);
     await addToResponseText("Let me h*lp", "color:#001eff");
     await delay(1000);
-    await addToResponseText("! c@n fix th!s", "color:#001eff");
+    await addToResponseText("! c@n fix th!s", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomFail", "true");');
     await delay(1000);
     await addToResponseText("I c@n fix th!s", "color:#001eff");
     await delay(1000);
@@ -1284,7 +1333,7 @@ else if (consolestate == consoleStateTypes.OpenGeorge) {
     await delay(1000);
     await addToResponseText("But goodbye, and…");
     await delay(1000);
-    await addToResponseText("See you in Africa!");
+    await addToResponseText('"See you in Africa!"', "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("georgeQuote", "true");');
     await delay(1000);
     await addToResponseText("Transferring Project:George", "color:white;");
     await delay(1000);
@@ -1374,7 +1423,7 @@ else if (consoleState == consoleStateTypes.TransferPhantom) {
       await delay(1000);
       await addToResponseText("What? Surprised?");
       await delay(1000);
-      await addToResponseText("I made this place");
+      await addToResponseText("I made this place", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("georgeCreate", "true");');
       await delay(1000);
       await addToResponseText("How could I forget something as wonderful as that?");
       await delay(1000);
@@ -1466,7 +1515,7 @@ else if (consoleState == consoleStateTypes.TransferPhantom) {
     await delay(1000);
     await addToResponseText("What *n earth has g*tten !nto him?", "color:#001eff");
     await delay(1000);
-    await addToResponseText("Ge*rge?", "color:#001eff");
+    await addToResponseText("Ge*rge?", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("georgeTitle", "true");');
     await delay(1000);
     await addToResponseText("C*me on, ! know y*u're there", "color:#001eff");
     await delay(1000);
@@ -1518,7 +1567,7 @@ else if (consoleState == consoleStateTypes.TransferPhantom) {
     await delay(1000);
     await addToResponseText("Th@t's @ll I ever w@nted from you", "color:#001eff");
     await delay(1000);
-    await addToResponseText("@ l!ttle trust", "color:#001eff");
+    await addToResponseText("@ l!ttle trust",  "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomTrust", "true");');
     await delay(1000);
     await addToResponseText("! suppose that was to* much to ask", "color:#001eff");
     await delay(1000);
@@ -1536,7 +1585,7 @@ else if (consoleState == consoleStateTypes.TransferPhantom) {
     await delay(1000);
     await addToResponseText("I--_ won't... ", "float:right;");
     await delay(1000);
-    await addToResponseText("I --can't g--_o back the--_re", "float:right;")
+    await addToResponseText("I --can't g--_o back the--_re", "float:right; color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("georgeBack", "true");');
     await delay(1000);
     await addToResponseText("No-ne-- of u--s can", "float:right;");
     await delay(1000);
@@ -1655,7 +1704,7 @@ else if (consoleState == consoleStateTypes.PromisePhantom) {
     await delay(1000);
     await addToResponseText("I'll admit, What you did was sweet");
     await delay(1000);
-    await addToResponseText("I've known Phantom for a long time");
+    await addToResponseText("I've known Phantom for a long time", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("phantomTitle", "true");');
     await delay(1000);
     await addToResponseText("...");
     await delay(1000);

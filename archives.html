@@ -6,12 +6,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <script src="archives.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Neonderthaw&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload ="notes()">
     <div class="console-page">
       <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -26,32 +27,34 @@
       <div class="george-title"> George 
         <div class="george-info"> 
           <ul>
-           <li>Has seen a time where Phantom was very, very angry</li> 
-           <li>Claims to have created the calculator, and what was inside it</li> 
-           <li>"I'll see you in Africa"</li> 
-           <li>Likes violets???</li> 
-           <li>Won't open the Remnant file because he "can't go back there"</li>
+           <li class="george-create" style="display:none;">Claims to have created the calculator, and what was inside it</li> 
+           <li class="george-quote" style="display:none;">"I'll see you in Africa"</li> 
+           <li class="george-back" style="display:none;">Won't open the Remnant file because he "can't go back there"</li>
+           <li class="george-violet" style="display:none;">Likes violets???</li> 
           </ul>
         </div>
       </div>
       <div class="phantom-title">Phantom
        <div class="phantom-info">
         <ul>
-          <li>Claims to be the only person capable of saving George</li>
-          <li>Has always wanted trust from others, especially George</li>
-          <li>Has tried to "fix things" before</li>
+          <li class="phantom-fix" style="display: none;">Claims to be the only person capable of saving George</li>
+          <li class="phantom-past" style="display: none;">Has seen a time where Ghost was very, very angry</li> 
+          <li class="phantom-ghost" style="display: none;">Has been trying to get rid of Ghost for ages</li>
+          <li class="phantom-trust" style="display: none;">Has always wanted trust from others, especially George</li>
+          <li class="phantom-fail" style="display: none;">Has tried to "fix things" before</li>
         </ul>
        </div>  
       </div>
       <div class="ghost-title">Ghost
         <div class="ghost-info">
           <ul>
-          <li>Doesn't like lairs</li>
-          <li>Seems to be unhappy</li>
-          <li>Once doubted, perhaps still doubts, those close to him</li>
-          <li>Feels or once felt powerless</li>
-          <li>"I'll be watching you"</li>
-          <li>Someone doesn't wish to be forgotten???</li>
+          <li class="ghost-liars">Doesn't like liars</li>
+          <li class="ghost-happy" style="display: none;">Seems to be unhappy</li>
+          <li class="ghost-doubt" style="display: none;">Once doubted, perhaps still doubts, those close to him</li>
+          <li class="ghost-power" style="display: none;">Feels or once felt powerless</li>
+          <li class="ghost-forget" style="display: none;">Who doesn't wish to be forgotten?</li>
+          <li class="ghost-social" style="display:none;">Used to have someone to talk too, misses them</li>
+          <li class="ghost-quote" style="display: none;">"I'll be watching you"</li>
          </ul>
         </div> 
       </div>
