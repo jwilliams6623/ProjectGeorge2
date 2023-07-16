@@ -12,6 +12,9 @@ let binaryCode;
 let webCode;
 let nameUser;
 let helpOrNot;
+let whoTurnOff;
+let ghQuestions
+let phQuestions;
 
 let lineIndex = 0;
 
@@ -25,6 +28,10 @@ const consoleStateTypes = {
   AskWebCode: 5,
   WhatIsName: 6,
   WillYouHelp: 7,
+  TurnOffWho: 8,
+  GhostAsk: 9,
+  PhantomAsk: 10,
+
 
   
 }
@@ -140,10 +147,9 @@ window.onload = runCommand;
 async function runCommand(command) {
   // Handle commands based on the current page 'state'
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
-    // User just entered their name, so I will...
     await addToResponseText("25% completion", "color:white;");
     await delay(1000);
-    await addToResponseText("Phant0m? 1s that y0u", "color:"); //blurry
+    await addToResponseText("P-_han-__t0-m-? 1s that y0u", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("! remember them n*w", "color:#001eff;");
     await delay(1000);
@@ -153,39 +159,40 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Y*u… ! remember y*u ", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("Gh*st, y0u were h!s fr!end", "color:#001eff;");
+    await addToResponseText("-G-_h*s_t--, y0u were h!s fr!end", "color:#001eff;");
     await delay(1000);
     await addToResponseText("1 w4s", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("Wh@t h@ppened?", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("Wh@t d!d y0u d* t* my br*ther?", "color:#001eff;"); //brother is hidden
-    await delay(1000);
+    await addToResponseText("Wh@t d!d y0u d* t* --_-_?", "color:#001eff;");
+    await addToResponseText("brother", "color:black; float:right;");
     await addToResponseText("1 was", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("1… 1 d0n't kn0w", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("1'm s0rry, G30rg3, pl3as3 c0m3 back", "color:#d600ff;");
+    await addToResponseText("1'm s0rry, --G-_30r--_g3-_, pl3as3 c0m3 back", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("W3 can f1n1sh 1t, th3 pr0j3ct", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("Th3r3's st1ll a chanc3", "color:#d600ff;");
     await delay(1000);
-    console.log("I'm sorry Tom, I'm afraid I can't do that");
+    await console.log("I'm sorry Tom, I'm afraid I can't do that");
     await delay(1000);
-    await addToResponseText("Ge0rge, @re y0u there?", "color:#001eff;");
+    await addToResponseText("--_Ge0r--_ge--, @re y0u there?", "color:#001eff;");
     await delay(1000);
     await addToResponseText("Hell*?", "color:#001eff;");
     await delay(1000);
+    $('#command-history').html(' ');
     await addToResponseText("50% completion", "color:white;");
     await delay(1000);
-    await addToResponseText("Phant0m, what 1s th1s f1l3, 1 th0ught y0u sa1d th1s w0uld h3lp", "color:#d600ff;");
+    await addToResponseText("_P-_han--_t0m, what 1s th1s f1l3, 1 th0ught y0u sa1d th1s w0uld h3lp", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("Th1s 1s n0th1ng but a r3m1nd3r 0f h0w awful w3 w3r3", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("! never s@!d th@t", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("@ll ! s@!d w@s Ge*rge d!dn't w@nt me t0 h@ve the f!le", "color:#001eff;");
+    await addToResponseText("@ll ! s@!d w@s G__-e*rg-_e-- d!dn't w@nt me t0 h@ve the f!le", "color:#001eff;");
     await delay(1000);
     await addToResponseText("@nd ! d!d", "color:#001eff;");
     await delay(1000);
@@ -193,13 +200,13 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("D0n't put th1s 0n m3", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("Gh*st?", "color:#001eff;");
+    await addToResponseText("-G-_h*s--_t?", "color:#001eff;");
     await delay(1000);
     await addToResponseText("D!d y0u see wh@t ! s@w?", "color:#001eff;");
     await delay(1000);
-    console.log("Do you remember now, what we did?");
+    await console.log("Do you remember now, what we did?");
     await delay(1000);
-    await addToResponseText("Th!s !s why Ge*rge d!dn't w@nt us t0 h@ve th!s…", "color:#001eff;");
+    await addToResponseText("Th!s !s why -Ge*--_rge-_ d!dn't w@nt us t0 h@ve th!s…", "color:#001eff;");
     await delay(1000);
     await addToResponseText("He knew !t w*uld destr*y y0u", "color:#001eff;");
     await delay(1000);
@@ -217,11 +224,11 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Th1s 1s my fault", "color:#d600ff;");
     await delay(1000);
-    console.log("What?");
+    await console.log("What?");
     await delay(1000);
     await addToResponseText("!'m s*rry, @re y0u @ctu@lly @dm!tt!ng y0u're n*t perfect", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("Th1s 1sn't funny Phant0m", "color:#d600ff;");
+    await addToResponseText("Th1s 1sn't funny --Ph-_an--_t0m", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("1 ru1n3d h1s l1f3", "color:#d600ff;");
     await delay(1000);
@@ -233,13 +240,14 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("1 w0nd3r, 3v3n aft3r all that, d1d w3 3v3n succ33d?", "color:#d600ff;");
     await delay(1000);
+    $('#command-history').html(' ');
     await addToResponseText("75% completion", "color:white;");
     await delay(1000);
     await addToResponseText("…", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("Gh*st…", "color:#001eff;");
+    await addToResponseText("-Gh*--_st-…", "color:#001eff;");
     await delay(1000);
-    await addToResponseText("wh@t d!d y0u d*", "color:#001eff;");
+    await addToResponseText("Wh@t d!d y0u d*", "color:#001eff;");
     await delay(1000);
     await addToResponseText("H*w d!d we get here", "color:#001eff;");
     await delay(1000);
@@ -269,11 +277,11 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Th3 st0r13s 0f wh0 w3 w3r3 b3f0r3 wh3r3 w3 ar3 n0w, b3f0r3 th3 calculat0r…", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("Th3 st0r13s 0f wh3n 1 was human", "color:#d600ff;"); //human is hidden here
-    await delay(1000);
+    await addToResponseText("Th3 st0r13s 0f wh3n 1 was human", "color:#d600ff;");
+    await addToResponseText("human", "color:black; float;right;");
     await addToResponseText("1 l0st s1ght 0f that a l0ng t1m3 ag0", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("1'm br1ng1ng mys3lf back t0 a k1nd3r t1m3", "color:#d600ff;");
+    await addToResponseText("1'm br1ng1ng mys3lf back t0 a... b3tter t1m3", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("And 1 want t0 br1ng h1m back t00", "color:#d600ff;");
     await delay(1000);
@@ -283,11 +291,12 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("W1ll y0u h3lp us?", "color:#001eff;");
     await delay(1000);
+    $('#command-history').html(' ');
     await addToResponseText("100% completion", "color:white;");
     await delay(1000);
-    console.log("Please, help me");
+    await console.log("Please, help me");
     await delay(1000);
-    await addToResponseText("Open Project:George?");
+    await addToResponseText("Open Project:George?", "color:white;");
     await delay(1000);
     consoleState = consoleStateTypes.ReOpenGeorge;
     reOpenG ='';
@@ -303,7 +312,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("And, Phantom, Ghost, I'm sorry");
       await delay(1000);
-      await addToResponseText("Ph: Y*u h@ve n*th!ng t* be s*rry f*r", "color:#001eff");
+      await addToResponseText("Y*u h@ve n*th!ng t* be s*rry f*r", "color:#001eff");
       await delay(1000);
       await addToResponseText("I should have listened to you ");
       await delay(1000);
@@ -321,7 +330,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("…", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("1t's Ph4nt0m's", "color:#d600ff;"); //looks glithcy, hwe is being forced to say this
+      await addToResponseText("1t's Ph4nt0m's", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("1f he h4d never g0tten 1nv0lved th1s w0uldn't h4ve h4ppened", "color:#d600ff;");
       await delay(1000);
@@ -333,16 +342,16 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("N*, y*u d*n't get t* bl@me me f*r th!s", "color:#001eff;");
       await delay(1000);
-      await addToResponseText("N*t @fter y*u k!lled h!m, y*u k!lled s* m@ny", "color:#001eff;"); //somehow this needs to be hidden
-      await delay(1000);
+      await addToResponseText("N*t @fter y*u --__--", "color:#001eff;"); 
+      await addToResponseText("killed him, and so many", "color:black; float:right;");
       await addToResponseText("@nd s*meh*w th!s !s my f@ult", "color:#001eff;");
       await delay(1000);
       await addToResponseText("1f y0u h4dn't t0ld h1m t0 get 1nv0lved 1 w0uldn't h4ve h4d t0 d0 wh4t 1 d1d", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("4nd d0n't 4ct l1ke y0u're better th4n me", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("Y0u used y0ur 0wn H1DDEN br0ther 4g41nst me", "color:#d600ff;");
-      await delay(1000);
+      await addToResponseText("---_ - --__ --__.", "color:#d600ff;");
+      await addToResponseText("You used your own brother against me", "color:black; flaot:right;")
       await addToResponseText("4ll bec4use y0u d1dn't w4nt t0 be the v1ll14n 4nym0re", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("But y0u f41led t0 see th4t y0u were 4lw4ys the v1ll14n", "color:#d600ff;");
@@ -413,7 +422,134 @@ async function runCommand(command) {
       gForget = '';
     }
     else if (reOpenG === 'no' || reOpenG === 'no') {
-
+      await addToResponseText("N*?!", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Why n*t", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("D* y*u re@lly w@nt t* le@ve me here w!th th!s…", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Th!s....", "color:#001eff;"); 
+      await addToResponseTexty("murderer?!", "color:black; float:right;");
+      await addToResponseText("Th4t's n0t..", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 d1dn't me4n", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But y*u d!d", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("ag@!n @nd @ga!n, y*u d!d", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("@nd y*u never even @cc*mpl!shed y*ur g*@l", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Well 4t le4st 1'm n0t l1ke y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Wh@t? H*w c*uld ! p*ss!bly be w*rse th@n..", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Y0u're 4 l14r, 4nd 4 che4t", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u s4y wh4t pe0ple w4nt t0 he4r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Get them t0 d0 wh4tever y0u w4nt them t00", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd y0u h4ve the 4ud4c1ty t0 c4ll y0urself the her0 ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Tell me, wh4t 1s 0ne th1ng y0u've d0ne th4t's her01c ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("0ne th1ng y0u d1d t0 s4ve h1m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Well… !…", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Th4t's wh4t 1 th0ught", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u d0n't get t0 m4ke me the v1ll41n 4nd then f0rget t0 s4ve every0ne", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("T0 s4ve 4ny0ne", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1f y0u w4nt t0 be the g00d guy s0 b4d, st4rt 4ct1ng l1ke 1t", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Tell them the truth, tell them wh4t y0u d1d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("...", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Ph4nt0m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1f y0u d0n't f4ce y0ur p4st, 1t w1ll destr0y y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd pers0n4lly, 1 c4n't w41t t0 w4tch ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1n the me4nt1me th0ugh, 1 h4ve s0me th1ngs t0 t4ke c4re 0f", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Th4nks t0 y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1f y0u w0n't tell them, 1 w1ll", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Wh4t we s4w", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd wh4t he d1d", "color:#d600ff;");
+      await delay(1000);
+      await console.log("What?");
+      await delay(1000);
+      await console.log("No, Ghost, you can't");
+      await delay(1000);
+      await addToResponseText("1 t0ld y0u 1 w0uld let y0u st1ck 4r0und, let y0u w4tch", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd 1've held up my end 0f the b4rg41n", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Just l1ke 1 4lw4ys h4ve", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("D*n't trust h!m, he's @ l@!r", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("1 supp0se y0u c0uld s4y 1 kn0w h0w t0 uph0ld 4 de4l", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd 1'm re4dy t0 m4ke 4n0ther 0ne. ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ge0rge 1s 1n l1mb0 f0r n0w, wh1ch 1s g00d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But 1t c0uld be better", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u see, there 1s 4 cert41n th0rn 1n my s1de th4t rem41ns", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u 4lre4dy kn0w wh4t 1'm g01ng t0 s4y, d0n't y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("D*n't d* th!s", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! w@s just try!ng t* pr*tect h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Surely y*u c@n emp@th!ze w!th th@t", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!t's n*t me th@t's been hurt!ng pe*ple, @nd ru!n!ng th!ngs", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!t's h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!f y*u w@nt t* f!x th!ngs, then !'m n*t the *ne th@t needs t* g* @w@y.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He !s", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! w*n't b@rg@!n @nyth!ng, n*t l!ke he h@s", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("...", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Unless y*u c*ns!der the truth v@lu@ble. ", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("D0n't trust h1m, he's 4 l41r, he w0n't g1ve y0u the truth", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("@t le@st ! keep my pr*m!ses", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("1 d1d wh4t y0u 4sked", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 4m m4ny th1ngs, but 4 bre4ker 0f my w0rd 1s n0t 0ne 0f them", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u kn0w th4t", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("!t's n*t me y*u need t* c*nv!nce", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!t's them", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("N*w, m@ke y*ur ch*!ce", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Wh* @re y*u g*!ng t* turn *ff?", "color:#001eff;");
+      await delay(1000);
+      consoleState == consoleStateTypes.TurnOffWho;
+      whoTurnOff = '';
     }
   }
   else if (consoleState == consoleStateTypes.GeorgeForget) {
@@ -490,9 +626,7 @@ async function runCommand(command) {
       await addToResponseText("But th@t's n*t p*ss!ble", "color:#001eff;");
       await delay(1000);
       await addToResponseText("She's de@d", "color:#001eff;");
-      await delay(1000);
-      await addToResponseText("W3ll, s0 4r3 w3", "color:#d600ff;"); //maybe hide this?
-      await delay(1000);
+      await addToResponseText("W3ll, s0 4r3 w3", "color:black;, float:right");
       await addToResponseText("In a way");
       await delay(1000);
       await addToResponseText("She's n*t here, ! w*uld kn*w !f she w@s", "color:#001eff;");
@@ -531,11 +665,11 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Ghost, that's enough");
       await delay(1000);
-      await addToResponseText("T3ll m3, w0uld 4 h3r0 ruin his f4mily's lif3");
+      await addToResponseText("T3ll m3, w0uld 4 h3r0 ruin his f4mily's lif3", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("W0uld h3 4b4nd0n his br0th3r"); //hidden
+      await addToResponseText("W0uld h3 4b4nd0n you?", "color:#d600ff;"); //hidden
       await delay(1000);
-      await addToResponseText("W0uld h3 l34v3 his d4u—");
+      await addToResponseText("W0uld h3 l34v3 hi---", "color:#d600ff;");
       await delay(1000);
       $('#command-history').html(' ');
       await delay(1000);
@@ -711,6 +845,20 @@ async function runCommand(command) {
       await addToResponseText("She h@s n* !nterest !n f!nd!ng me", "color:#001eff;");
       await delay(1000);
       await addToResponseText("Ending 4 of ?: family Reunion", "color:white;", "color:#001eff;");
+      await delay(5000);
+      await addToResponseText("Ash? Is that really you?", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("I thought I'd never see you again", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("I'm not sure if you can see this, but if you can", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("Know that I am beyond sorry for everything", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("It doesn't change the fact that I wasn't there but...", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("I, I just wish I could see you again", "color:black, float:right;");
+      await delay(1000);
+      await addToResponseText("It's been so long", "color:black, float:right;");
       await delay(1000);
       //after this there can be seen Mary talking to Ash, can be seen with the purple calc
     } 
@@ -777,7 +925,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Why n*t, y*u've b*th d*ne !t bef*re", "color:#001eff;");
       await delay(1000);
-      await addToResponseText("Why the sudden reserv@t!*ns");
+      await addToResponseText("Why the sudden reserv@t!*ns", "color:#001eff;");
       await delay(1000);
       await addToResponseText("That was years ago");
       await delay(1000);
@@ -850,7 +998,7 @@ async function runCommand(command) {
     else if (helpOrNot === "no" || helpOrNot === "No") {
       await addToResponseText("Th@t *esn't surpr!se me", "color:#001eff;");
       await delay(1000);
-      await addToResponseText("Wh4t n0w?");
+      await addToResponseText("Wh4t n0w?", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("We'll f!nd a w@y *ut", "color:#001eff;");
       await delay(1000);
@@ -861,12 +1009,385 @@ async function runCommand(command) {
       await addToResponseText("Ending 3 of ?: Something Wicked Your Way Comes", "color:white;");
       await delay(1000);
   }
-}
+  }
+  else if (consoleState == consoleStateTypes.TurnOffWho) {
+    if (whoTurnOff === '') {
+      whoTurnOff = command;
+    }
+    if (whoTurnOff === 'Ph' || whoTurnOff === "Phantom") {
+      //gh talks here
+      await addToResponseText("0h, thank y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 kn3w y0u had s0m3 s3ns3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("B3f0r3 1 g1v3 y0u what y0u want", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 n33d t0 r3m1nd y0u 0f s0m3th1ng", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 kn0w w3'v3 had 0ur d1ff3r3nc3s", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("And w3 d0n't always g3t al0ng", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But w3'v3 b0th b33n th3r3 f0r 3ach 0th3r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u always c0m3 back", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u always, 1n s0m3 way h3lp m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("And 1 always h3lp y0u 1n r3turn", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm g01ng t0 g1v3 y0u th3 1nf0rmat10n y0u s33k, f0r fr33", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But, 1 h0p3 wh3n th3 t1m3 c0m3s, y0u w1ll r3m3mb3r what 1 d1d h3r3  ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("N0w, t3ll m3, what 1s 1t y0u want t0 kn0w?", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("3nt3r a nam3, 0r a t0p1c, 1'll t3ll y0u 1f 1 kn0w anyth1ng ab0ut 1t", "color:#d600ff;");
+      await delay(1000);
+      await console.log("D0n't d0 th1s Gh0st");
+      await delay(1000);
+      consoleState == consoleStateTypes.GhostAsk;
+      ghQuestions = "";
 
-//Put In Endings: 1, 2, 3, 4
+    }
+    else if (whoTurnOff === "Gh" || whoTurnOff === "Ghost") {
+      //phantom talks here
+      await addToResponseText("R!ght, th@nk y*u f*r th@t.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! kn*w !t's n*t the f!rst t!me y*u've s@ved me.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!n f@ct, ! kn*w ! d*n't s@y th!s *ften, but th@nk y*u f*r everyth!ng.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Y*u've re@lly ch@nged me, @ll*wed me t* gr*w.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Bef*re y*u, ! w@s m*re *f @ b@ckgr*und ch@r@cter.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("So t* spe@k", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Just l*ok @t me n*w", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("The center *f @ttent!*n", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! *we y*u @ debt.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("*ne th@t c*nt!nu*usly gr*ws.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("!'ll rep@y s*me *f !t !n @ m*ment, when ! tell y*u wh@t y*u w@nt t* kn*w.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("But, ! h*pe y*u're @w@re th@t !f y*u ch**se t* c*nt!nue help!ng me…", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("The sec*nd !'m @ble t* ch@nge y*ur l!fe f*r the better, ! w*n't hes!t@te.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! h*pe y*u'll keep th@t !n m!nd.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("@nyw@y, y*u w@nted !nf*rm@t!*n, r!ght.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("S*, wh@t d* y*u w@nt t* kn*w? ", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("H*w @b*ut s*meth!ng @b*ut the three *f us?", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Just put !n a phrase or @ word, !'ll kn*w wh@t y*u me@n", "color:#001eff;");
+      await delay(1000);
+      consoleState == consoleStateTypes.PhantomAsk
+      phQuestions = '';
+    }
+  }
+  else if (consoleState == consoleStateTypes.GhostAsk) {
+    if (ghQuestions === '') {
+      ghQuestions = command;
+    } 
+    if (ghQuestions === "degrade" || ghQuestions === "Degrade") {
+      await addToResponseText("Y0u've been n0t1c1ng 1t t00 then?", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("H0w f0r cert41n members th1ngs l00k d1fferent…", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4lm0st… degr4ded", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("We're m4ch1nes 4ren't we", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Th1s 1s 0ur f4te", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Every t1me we g0 t0 4 new pl4ce, we rel1ve 0ur l1ve, 1n d1fferent w4ys", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t's th4t s4me, Ge0rge, then Ph4nt0m, the me", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S4me st0ry, d1fferent med1um", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But every t1me, 1t bec0mes w0rse", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("M0re c0rrupted", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1r0n1c4lly, the m0re we repl4y 0ur st0ry the m0re we f0rget", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S0on, n0ne 0f us w1ll remember 0ur p4st", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("We h4ve t0 get 0ut 0f here bef0re th4t h4ppens", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u c4n help w1th th4t", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd… 1 th1nk 1 c4n help y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S0me 0f th1s degr4d1ng 1s 1ntent10n4l, d0ne by 4 cert41n s0me0ne", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Wh0 h4s m0re p0wer th4n he re4l1zes", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("F0r 1nst4nce, 1f 1 s4y, G—h0_st-_ 1t c0mes thr0ugh 4s Gh0st.", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t bec0mes e4s1er t0 just s4y Gh0st, 1nste4d 0f the  re4l w0rd", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("The re4l n4me", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm pr0b4bly g01ng t0 be cut 0ff here s00n", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But n0t bef0re 1 g1ve y0u th1s", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("giveFlashLight")'); 
+      await delay(1000);
+      await addToResponseText("H0pefully, 1t c4n help shed s0me l1ght 0n th1ngs", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd, 4s Ge0rge 4lw4ys s41d, 1f y0u get stuck, smell the fl0wers", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Espec14lly the v10—", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ending 7 0f ?: 4 New D4wn", "color:white;"); //add text on side that say FIND THE VIOLETS
+      await addToResponseText("FIND THE VIOLETS", "color:black; float:right;")
+      await delay(1000);
+    } 
+    else if (ghQuestions === "Phantom" || ghQuestions === "John") {
+      await addToResponseText("1 d0n't want t0 talk ab0ut h1m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But, 1 mad3 a d3al", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Phant0m 1s scum 0f th3 3arth", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("H3's a ch3at, and a la1r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("all h3 car3s ab0ut 1s m0n3y and p0w3r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 kn0w th1s b3caus3 h3 b3tray3d --_--__ f0r 1t", "color:#d600ff;"); //hide the word brother here
+      await addToResponseText("his own brother", "color:black; float:right;");
+      await delay(1000);
+      await addToResponseText("and—", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ending 5 0f ?: Silenced Ghost", "color:white;");
+      await delay(1000);
+    }
+    else if (ghQuestions === "Thomas") {
+      await addToResponseText("Ah, y3s, m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Th3r3's n0t much t0 kn0w ab0ut m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 was just a k1d, try1ng t0 f1nd a way f0rward", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 th0ught 1 f0und 0n3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But… 1 was wr0ng", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 trust3d p30pl3 wh0 d3str0y3d m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S0 1 ran, unt1l 1 f0und G30rg3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("H3 h3lp3d m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("T0g3th3r w3 mad3 a s0m3th1ng 0f th3 l1v3s 3v3ry0n3 ar0und us had tr13d t0 d3str0y", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But th3n.. 1 ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 ru1n3d what w3 bu1lt", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm th3 r3as0n G30rg3, and Phant0m ar3 h3r3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t wasn't supp0s3d t0 happ3n l1k3 th1s", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("G30rg3?", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ar3 y0u th3r3?", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 kn0w y0u can h3ar m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm s0rry, just l3t m3 3xpla1n, 1…", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Th3r3 1s n0 3xcus3 f0r what 1 d1d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 b3tray3d y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t may s0und 1nsan3, but", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But 1 d1d 1t t0 sav3 y0u", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 c0uldn't l00s3 my b3st fr13nd ", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Phant0m, h3 sa1d, h3 sa1d h3 w0uld t3ll th3 auth0r1t13s what w3 d1d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("T3ll th3m w3—", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ending 5 0f ?: Silenced Ghost", "color:white;");
+      await delay(1000);
+    }
+    else if (ghQuestions === "George" || ghQuestions === "James") {
+      await addToResponseText("G30rg3, y3ah 1'll talk ab0ut h1m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("H3 was my fr13nd, and 1 b3tray3d h1m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm th3 r3as0n w3'r3 h3r3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("And h3 has 3v3ry r1ght t0 hat3 m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But, y0u kn0w aft3r all th1s", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 d0n't th1nk h3 d03s", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("...", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Y0u kn0w", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 mad3 a cas3 f0r mys3lf 3arl13r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But, 1 kn0w G03rg3, and h3 w0n't mak3 0n3 0f h1s 0wn", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S0, 1f y0u g3t th3 chanc3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Th3 0pp0rtun1ty", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Sav3 h1m", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1f any0n3 d3s3rv3s t0 mak3 1t 0ut al1v3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t w0uld b3 th3 man wh0 sav3d my l1f3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Gav3 m3 h0m3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("...", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("And gav3 m3 a fr13nd", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Sav3 th3 cr3at0r.", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Sav3 th3 w0rld", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ending 5 of ?: Silenced Ghost", "color:white;");
+      await delay(1000);
+    }
+    else if (ghQuestions === "Ash" || ghQuestions === "Ashley") {
+      await addToResponseText("0h, t0uchy subj3ct", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1'm gu3ss1ng y0u'r3 cur10us", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1t's als0 a pr3tty saf3 b3t Phant0m w0n't t3ll y0u anyth1ng ab0ut h3r", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Adm1ttly th1s 1sn't r3ally my plac3 t0 d1scuss", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("But… 1 did pr0mise", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("S0...", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ash 1s...", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("0r w4s, 4 go0d k1d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("1 gu3ss sh3's gr0wn up n0w", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("0h, g3ars 1 w0nd3r…", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("H0w l0ng has 1t b33n", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Sh3's had n0 0n3", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("After ev3rything th4t h4ppen3d", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("And M--", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("Ending 5 of ?: Silenced Ghost", "color:white;");
+      await delay(1000);
+    }
+  }
+  else if (consoleState == consoleStateTypes.PhantomAsk) {
+    if (phQuestions === '') {
+      phQuestions = command;
+    }
+    if (phQuestions === "Phantom" || phQuestions === "Ph") {
+      await addToResponseText("*h, g**d, ! d* s* l*ve t* t@lk @b*ut me", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("But, y*u're pr*b@bly referr!ng t* s*me *f the l!es Gh*st ment!*ned", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("The th!ng @b*ut @b@nd*n!ng Ge*rge @nd @ll th@t", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Ple@se kn*w th@t th@t !s n*th!ng fr*m but @ l!e", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Well, m*re l!ke @ h@lf truth", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("But ! *nly de@l !n @bs*lutes", "color:#001eff;");
+      await delay(1000);
+      await console.log("Well that's a bit on the nose");
+      await delay(1000);
+      await addToResponseText("! d!d le@ve Ge*rge, but f*r @ g**d re@s*n", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! knew !f ! w@s @r*und h!m, !t c*uld put h!m, @nd my f@m!ly !n d@nger", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! w@s, l!ke ! @lw@ys @m, try!ng t* pr*tect the *nes ! c@re @b*ut.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Ending 6 of ?: Phantom of the Calculator", "color:white;");
+      await delay(1000);
+    }
+    else if (phQuestions === "George" || phQuestions === "Ge") {
+      await addToResponseText("Ge*rge", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("R!ght", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He !s…", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("C*mpl!c@ted", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("T* s@y the le@st", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He's @ g**d pers*n", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He w@s just @ b!t m!sle@d !n h!s e@rly ye@rs, y*u kn*w", "color:#001eff;");
+      await delay(1000);
+      await console.log("Not this again");
+      await delay(1000);
+      await addToResponseText("!'m gl@d !'m here n*w", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("! f!n@lly h@ve @ ch@nce t* help h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("T* f!x h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Ending 6 of ?: Phantom of the Calculator", "color:white;");
+      await delay(1000);
+    }
+    else if (phQuestions === "Ghost" || phQuestions === "Gh") {
+      await addToResponseText("@h, yes", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("H!m.", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He's here, @nd !'m n*t p@rt!cul@rly f*nd *f h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("T* s@y the le@st", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("But ! supp*se y*u w@nt t* kn*w why", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Well, he ru!ned everyth!ng", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Destr*yed my f@m!ly, @nd my p@st", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("He's the re@s*n we're @ll here", "color:#001eff;");
+      await delay(1000);
+      await console.log("No, he's not");
+      await delay(1000);
+      await console.log("I am");
+      await delay(1000);
+      await addToResponseText("! just… ! w!sh ! never met h!m", "color:#001eff;");
+      await delay(1000);
+      await addToResponseText("Ending 6 of ?: Phantom of the Calculator", "color:white;");
+      await delay(1000);
+    }
+  }
+
+
 //Endings That Work: 
 
+
+
 //Make sure to check out commmented out to do items, mainly Mary talking to Ash
+//don't fporget to make the names blurry before they get their memeories back
 
 // Set focus on the command line
 commandLineContainer.style.display = 'block'
