@@ -2,11 +2,11 @@ let commandLine;
 let commandHistory;
 let commandLineContainer;
 let consoleContainer;
-let Cntr=1
-   
+let Cntr = 1
+
 
 let userName;
-let reOpenG;
+let georgeReOpen;
 let gForget;
 let binaryCode;
 let webCode;
@@ -23,7 +23,7 @@ const consoleStateTypes = {
   Hello: 0,
   AskWhoAreYou: 1,
   ReOpenGeorge: 2,
-  GeorgeForget: 3, 
+  GeorgeForget: 3,
   EnterBinary: 4,
   AskWebCode: 5,
   WhatIsName: 6,
@@ -33,7 +33,7 @@ const consoleStateTypes = {
   PhantomAsk: 10,
 
 
-  
+
 }
 let consoleState = consoleStateTypes.Hello;
 
@@ -77,6 +77,7 @@ async function handleCommand(command) {
   commandLine.value = "";
   commandLine.rows = 2;
 }
+
 
 window.onload = function () {
   commandLine = document.querySelector("#command-line");
@@ -139,7 +140,28 @@ function delay(milliseconds) {
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-window.onload = runCommand;
+
+if (Cookies.get('hasFlashLight') === 'true') { 
+  document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
+  Cookies.set('flashOn', '');
+  window.addEventListener('keydown', (e) => {
+    console.log(e.key)
+    switch (e.key) {
+      case 'f':
+        console.log("pressed f")
+        if (Cookies.get('flashOn') === 'true') {
+          Cookies.set('flashOn', 'false');
+          console.log('flash is off')
+        }
+        else {
+          Cookies.set('flashOn', 'true');
+          console.log('flash is on')
+        } 
+      break
+    }
+  })
+}
+
 
 
 // Main code to manage what happens when a user enters text.
@@ -166,7 +188,7 @@ async function runCommand(command) {
     await addToResponseText("Wh@t h@ppened?", "color:#001eff;");
     await delay(1000);
     await addToResponseText("Wh@t d!d y0u d* t* --_-_?", "color:#001eff;");
-    await addToResponseText("brother", "color:black; float:right;");
+    await delay(1000);
     await addToResponseText("1 was", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("1… 1 d0n't kn0w", "color:#d600ff;");
@@ -277,8 +299,8 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Th3 st0r13s 0f wh0 w3 w3r3 b3f0r3 wh3r3 w3 ar3 n0w, b3f0r3 th3 calculat0r…", "color:#d600ff;");
     await delay(1000);
-    await addToResponseText("Th3 st0r13s 0f wh3n 1 was human", "color:#d600ff;");
-    await addToResponseText("human", "color:black; float;right;");
+    await addToResponseText("Th3 st0r13s 0f wh3n 1 was...", "color:#d600ff;");
+    document.getElementById("hidden-text").innerHTML = "human";
     await addToResponseText("1 l0st s1ght 0f that a l0ng t1m3 ag0", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("1'm br1ng1ng mys3lf back t0 a... b3tter t1m3", "color:#d600ff;");
@@ -294,18 +316,18 @@ async function runCommand(command) {
     $('#command-history').html(' ');
     await addToResponseText("100% completion", "color:white;");
     await delay(1000);
-    await console.log("Please, help me");
+    console.log("Please, help me");
     await delay(1000);
     await addToResponseText("Open Project:George?", "color:white;");
     await delay(1000);
     consoleState = consoleStateTypes.ReOpenGeorge;
-    reOpenG ='';
+    georgeReOpen = '';
   }
-  else if (consoleState === consoleStateTypes.ReOpenGeorge) {
-    if (reOpenG === '') {
-      reOpenG = command;
+  else if (consoleState == consoleStateTypes.ReOpenGeorge) {
+    if (georgeReOpen === '') {
+      georgeReOpen = command;
     }
-    if (reOpenG === 'yes' || reOpenG === 'yes') {
+    if (georgeReOpen === 'Yes' || georgeReOpen === 'yes') {
       await addToResponseText("Project George Opened", "color:white;");
       await delay(1000);
       await addToResponseText("Thank you");
@@ -342,7 +364,10 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("N*, y*u d*n't get t* bl@me me f*r th!s", "color:#001eff;");
       await delay(1000);
-      await addToResponseText("N*t @fter y*u --__--", "color:#001eff;"); 
+      await addToResponseText("N*t @fter y*u", "color:#001eff;");
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "killed him, and so many";
+      await delay(1000);
       await addToResponseText("killed him, and so many", "color:black; float:right;");
       await addToResponseText("@nd s*meh*w th!s !s my f@ult", "color:#001eff;");
       await delay(1000);
@@ -351,7 +376,9 @@ async function runCommand(command) {
       await addToResponseText("4nd d0n't 4ct l1ke y0u're better th4n me", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("---_ - --__ --__.", "color:#d600ff;");
-      await addToResponseText("You used your own brother against me", "color:black; flaot:right;")
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "You used your own brother against me";
+      await delay(1000);
       await addToResponseText("4ll bec4use y0u d1dn't w4nt t0 be the v1ll14n 4nym0re", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("But y0u f41led t0 see th4t y0u were 4lw4ys the v1ll14n", "color:#d600ff;");
@@ -421,15 +448,17 @@ async function runCommand(command) {
       consoleState = consoleStateTypes.GeorgeForget;
       gForget = '';
     }
-    else if (reOpenG === 'no' || reOpenG === 'no') {
+    else if (georgeReOpen === 'No' || georgeReOpen === 'no') {
       await addToResponseText("N*?!", "color:#001eff;");
       await delay(1000);
       await addToResponseText("Why n*t", "color:#001eff;");
       await delay(1000);
       await addToResponseText("D* y*u re@lly w@nt t* le@ve me here w!th th!s…", "color:#001eff;");
       await delay(1000);
-      await addToResponseText("Th!s....", "color:#001eff;"); 
-      await addToResponseTexty("murderer?!", "color:black; float:right;");
+      await addToResponseText("Th!s....", "color:#001eff;");
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "murderer?";
+      await delay(1000);
       await addToResponseText("Th4t's n0t..", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("1 d1dn't me4n", "color:#d600ff;");
@@ -553,7 +582,7 @@ async function runCommand(command) {
     }
   }
   else if (consoleState == consoleStateTypes.GeorgeForget) {
-     // Store answer
+    // Store answer
     if (gForget === '') {
       gForget = command;
     }
@@ -571,7 +600,7 @@ async function runCommand(command) {
       await delay(1000);
       consoleState = consoleStateTypes.EnterBinary
       binaryCode = '';
-    } 
+    }
     else if (gForget === 'no') {
       await addToResponseText("So be it");
       await delay(1000);
@@ -626,7 +655,9 @@ async function runCommand(command) {
       await addToResponseText("But th@t's n*t p*ss!ble", "color:#001eff;");
       await delay(1000);
       await addToResponseText("She's de@d", "color:#001eff;");
-      await addToResponseText("W3ll, s0 4r3 w3", "color:black;, float:right");
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "S0 ar3 w3";
+      await delay(1000);
       await addToResponseText("In a way");
       await delay(1000);
       await addToResponseText("She's n*t here, ! w*uld kn*w !f she w@s", "color:#001eff;");
@@ -731,61 +762,64 @@ async function runCommand(command) {
       await delay(1000);
       consoleState = consoleStateTypes.WhatIsName;
       nameUser = '';
-    } 
+    }
   }
   else if (consoleState == consoleStateTypes.EnterBinary) {
-      if (binaryCode === '') {
-        binaryCode = command;
-      }
-      if (webCode === "01984") {
-        await addToResponseText("This is an invalid response. Stop. Now.", "color:white;");
-        await delay(1000);
-        await addToResponseText("What?");
-        await delay(1000);
-        await addToResponseText("St!ll not us do!ng !t", "color:#001eff");
-        await delay(1000);
-        await addToResponseText("Hello?");
-        await delay(1000);
-        await addToResponseText("Is someone there?");
-        await delay(1000);
-        await addToResponseText("There must be another code, do any of you have some ideas?"); //found on this page with the use of the green flashlight
-        await delay(1000);
-        consoleState = consoleStateTypes.AskWebCode;
-        webCode = '';
-      }
+    if (binaryCode === '') {
+      binaryCode = command;
+    }
+    if (webCode === "01984") {
+      await addToResponseText("This is an invalid response. Stop. Now.", "color:white;");
+      await delay(1000);
+      await addToResponseText("What?");
+      await delay(1000);
+      await addToResponseText("St!ll not us do!ng !t", "color:#001eff");
+      await delay(1000);
+      await addToResponseText("Hello?");
+      await delay(1000);
+      await addToResponseText("Is someone there?");
+      await delay(1000);
+      await addToResponseText("There must be another code, do any of you have some ideas?"); //found on this page with the use of the green flashlight
+      await delay(1000);
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "01984";
+      await delay(1000);
+      consoleState = consoleStateTypes.AskWebCode;
+      webCode = '';
+    }
   }
   else if (consoleState == consoleStateTypes.AskWebCode) {
-      if (webCode === '') {
-        webCode = command;
-      }
-      if (webCode === "01984") {
-        await addToResponseText("Too Many invalid responses, restarting program", "color:white;");
-        await delay(1000);
-        await addToResponseText("What!");
-        await delay(1000);
-        await addToResponseText("You can't do that, stop!");
-        await delay(1000);
-        await addToResponseText("Th@t voice… ! know !t from s*mewhere, where…", "color:#001eff");
-        await delay(1000);
-        await addToResponseText("Resarting program in 3", "color:white;");
-        await delay(1000);
-        await addToResponseText("No!");
-        await delay(1000);
-        await addToResponseText("2", "color:white;");
-        await delay(1000);
-        await addToResponseText("D0n't", "color:#d600ff;");
-        await delay(1000);
-        await addToResponseText("W@it…", "color:#001eff");
-        await delay(1000);
-        await addToResponseText("1", "color:white;");
-        await delay(1000);
-        await addToResponseText("M@--", "color:#001eff");
-        await delay(1000);
-        await addToResponseText("Program Restarted, Please Play Again", "color:white;");
-        await delay(1000);
-        await addToResponseText("Ending 1 of ?: Begin Again", "color:white;");
-        await delay(1000);
-      }
+    if (webCode === '') {
+      webCode = command;
+    }
+    if (webCode === "01984") {
+      await addToResponseText("Too Many invalid responses, restarting program", "color:white;");
+      await delay(1000);
+      await addToResponseText("What!");
+      await delay(1000);
+      await addToResponseText("You can't do that, stop!");
+      await delay(1000);
+      await addToResponseText("Th@t voice… ! know !t from s*mewhere, where…", "color:#001eff");
+      await delay(1000);
+      await addToResponseText("Resarting program in 3", "color:white;");
+      await delay(1000);
+      await addToResponseText("No!");
+      await delay(1000);
+      await addToResponseText("2", "color:white;");
+      await delay(1000);
+      await addToResponseText("D0n't", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("W@it…", "color:#001eff");
+      await delay(1000);
+      await addToResponseText("1", "color:white;");
+      await delay(1000);
+      await addToResponseText("M@--", "color:#001eff");
+      await delay(1000);
+      await addToResponseText("Program Restarted, Please Play Again", "color:white;");
+      await delay(1000);
+      await addToResponseText("Ending 1 of ?: Begin Again", "color:white;");
+      await delay(1000);
+    }
   }
   else if (consoleState == consoleStateTypes.WhatIsName) {
     if (nameUser === '') {
@@ -845,23 +879,13 @@ async function runCommand(command) {
       await addToResponseText("She h@s n* !nterest !n f!nd!ng me", "color:#001eff;");
       await delay(1000);
       await addToResponseText("Ending 4 of ?: family Reunion", "color:white;", "color:#001eff;");
-      await delay(5000);
-      await addToResponseText("Ash? Is that really you?", "color:black, float:right;");
+      await delay(10000);
+      document.getElementById("hidden-text").innerHTML = "Ash, is that really you?";
       await delay(1000);
-      await addToResponseText("I thought I'd never see you again", "color:black, float:right;");
-      await delay(1000);
-      await addToResponseText("I'm not sure if you can see this, but if you can", "color:black, float:right;");
-      await delay(1000);
-      await addToResponseText("Know that I am beyond sorry for everything", "color:black, float:right;");
-      await delay(1000);
-      await addToResponseText("It doesn't change the fact that I wasn't there but...", "color:black, float:right;");
-      await delay(1000);
-      await addToResponseText("I, I just wish I could see you again", "color:black, float:right;");
-      await delay(1000);
-      await addToResponseText("It's been so long", "color:black, float:right;");
+      document.getElementById("hidden-text").innerHTML = "I thought I'd never see you again";
       await delay(1000);
       //after this there can be seen Mary talking to Ash, can be seen with the purple calc
-    } 
+    }
     else {
       await addToResponseText("Right, right, thank you" + command);
       await delay(1000);
@@ -1008,7 +1032,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Ending 3 of ?: Something Wicked Your Way Comes", "color:white;");
       await delay(1000);
-  }
+    }
   }
   else if (consoleState == consoleStateTypes.TurnOffWho) {
     if (whoTurnOff === '') {
@@ -1095,7 +1119,7 @@ async function runCommand(command) {
   else if (consoleState == consoleStateTypes.GhostAsk) {
     if (ghQuestions === '') {
       ghQuestions = command;
-    } 
+    }
     if (ghQuestions === "degrade" || ghQuestions === "Degrade") {
       await addToResponseText("Y0u've been n0t1c1ng 1t t00 then?", "color:#d600ff;");
       await delay(1000);
@@ -1139,7 +1163,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("1'm pr0b4bly g01ng t0 be cut 0ff here s00n", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("But n0t bef0re 1 g1ve y0u th1s", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("giveFlashLight")'); 
+      await addToResponseText("But n0t bef0re 1 g1ve y0u th1s", "color:blue; font-family:Lucida Console; text-shadow: 2px 2px 3px red; cursor: pointer;", "", 'Cookies.set("hasFlashlight", "true");');
       await delay(1000);
       await addToResponseText("H0pefully, 1t c4n help shed s0me l1ght 0n th1ngs", "color:#d600ff;");
       await delay(1000);
@@ -1147,10 +1171,11 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Espec14lly the v10—", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("Ending 7 0f ?: 4 New D4wn", "color:white;"); //add text on side that say FIND THE VIOLETS
-      await addToResponseText("FIND THE VIOLETS", "color:black; float:right;")
+      document.getElementById("hidden-text").innerHTML = "F1nd th3 v1ol3ts";
       await delay(1000);
-    } 
+      await addToResponseText("Ending 7 of ?: A New Dawn", "color:white;"); //add text on side that say FIND THE VIOLETS
+      await delay(1000);
+    }
     else if (ghQuestions === "Phantom" || ghQuestions === "John") {
       await addToResponseText("1 d0n't want t0 talk ab0ut h1m", "color:#d600ff;");
       await delay(1000);
@@ -1163,7 +1188,8 @@ async function runCommand(command) {
       await addToResponseText("all h3 car3s ab0ut 1s m0n3y and p0w3r", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("1 kn0w th1s b3caus3 h3 b3tray3d --_--__ f0r 1t", "color:#d600ff;"); //hide the word brother here
-      await addToResponseText("his own brother", "color:black; float:right;");
+      await delay(1000);
+      document.getElementById("hidden-text").innerHTML = "his own brother";
       await delay(1000);
       await addToResponseText("and—", "color:#d600ff;");
       await delay(1000);
@@ -1382,16 +1408,16 @@ async function runCommand(command) {
   }
 
 
-//Endings That Work: 
+  //Endings That Work: 
 
 
 
-//Make sure to check out commmented out to do items, mainly Mary talking to Ash
-//don't fporget to make the names blurry before they get their memeories back
+  //Make sure to check out commmented out to do items, mainly Mary talking to Ash
 
-// Set focus on the command line
-commandLineContainer.style.display = 'block'
-scrollToBottom();
-commandLine.focus();
+  // Set focus on the command line
+  commandLineContainer.style.display = 'block'
+  scrollToBottom();
+  commandLine.focus();
+
 
 }

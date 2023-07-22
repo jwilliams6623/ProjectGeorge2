@@ -19,13 +19,15 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "0";
   }
 
+  
+
   function notes() {
     console.log("hello1");
-    if (Cookies.get('currentUser' === 'John') || Cookies.get('currentUser' === 'James') || Cookies.get('currentUser' === 'Thomas')) {
+    if (Cookies.get('currentUser' === 'AShley')) {
       // fill this later
     }
     if (Cookies.get('ghostTitle') === 'true') {
-      document.querySelectorAll(".ghost-title").forEach(a=>a.style.visibility = "visible");
+      document.querySelectorAll(".ghost-title").forEach(a=>a.style.visbility = "visible");
     }
     if (Cookies.get('ghostLiars') === 'true') {
       document.querySelectorAll(".ghost-liars").forEach(a=>a.style.display = "inherit");
@@ -78,6 +80,26 @@ function openNav() {
       document.querySelectorAll(".george-back").forEach(a=>a.style.display = "inherit");
     }
 
+
+    if (Cookies.get('hasFlashLight') === "true") { 
+      document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
+      window.addEventListener('keydown', (e) => {
+        console.log(e.key)
+        switch (e.key) {
+          case 'f':
+            console.log("pressed f")
+            if (Cookies.get('flashOn') === 'true') {
+             Cookies.set('flashOn', 'false');
+             console.log('flash is off')
+            }
+            else {
+              Cookies.set('flashOn', 'true');
+              console.log('flash is on')
+            } 
+            break
+        }
+      })
+    }
     // if (Cookies.get('georgeViolet') === 'true') {
     //   document.querySelectorAll(".george-violet").forEach(a=>a.style.display = "inherit");
     // }
