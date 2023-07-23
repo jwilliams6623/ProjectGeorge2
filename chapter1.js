@@ -34,7 +34,9 @@ const consoleStateTypes = {
 let consoleState = consoleStateTypes.Hello;
 
 
-
+function foundFile() {
+  Cookies.set('memFile', 'true');
+}
 
 /* Set the width of the side navigation to 250px */
 function openNav() {

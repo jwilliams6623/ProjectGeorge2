@@ -341,6 +341,7 @@ async function runCommand(command) {
       Cookies.set('ghostQuote', 'true');
       //inventory
       Cookies.set('hasFlashLight', 'true');
+      Cookies.set('memFile', 'true');
     }
     else if (hasAskForProgram === 'reset') {
       //George
@@ -367,6 +368,7 @@ async function runCommand(command) {
       Cookies.remove('ghostQuote');
       // Inventory
       Cookies.remove('hasFlashLight');
+      Cookies.remove('memFile');
 
     }
   }

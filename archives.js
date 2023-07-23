@@ -19,10 +19,13 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "0";
   }
 
+  function memFileOpen() {
+    Cookies.set('memFile1', 'true');
+    alert('Refresh, then maybe check the menu again')
+  }
   
 
   function notes() {
-    console.log("hello1");
     if (Cookies.get('currentUser' === 'AShley')) {
       // fill this later
     }
@@ -80,6 +83,13 @@ function openNav() {
       document.querySelectorAll(".george-back").forEach(a=>a.style.display = "inherit");
     }
 
+
+    if (Cookies.get('memFile') === 'true') {
+      document.querySelectorAll(".file-img").forEach(a=>a.style.display = "inherit");
+    }
+    if (Cookies.get('memFile1') === 'true') {
+      document.querySelectorAll(".memF").forEach(a=>a.style.display = "inherit");
+    }
 
     if (Cookies.get('hasFlashLight') === "true") { 
       document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
