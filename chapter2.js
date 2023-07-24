@@ -137,30 +137,32 @@ async function writeResponseSlowly(responseDivId, text) {
 
 // Wait for x miliseconts
 function delay(milliseconds) {
+  
   return new Promise(resolve => setTimeout(resolve, milliseconds));
 }
 
-
-if (Cookies.get('hasFlashLight') === 'true') { 
-  document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
-  Cookies.set('flashOn', '');
-  window.addEventListener('keydown', (e) => {
-    console.log(e.key)
-    switch (e.key) {
-      case 'f':
-        console.log("pressed f")
-        if (Cookies.get('flashOn') === 'true') {
-          Cookies.set('flashOn', 'false');
-          console.log('flash is off')
-        }
-        else {
-          Cookies.set('flashOn', 'true');
-          console.log('flash is on')
-        } 
-      break
-    }
-  })
-}
+document.addEventListener('DOMContentLoaded', function() {
+  if (Cookies.get('hasFlashLight') === 'true') { 
+    document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
+    Cookies.set('flashOn', '');
+    window.addEventListener('keydown', (e) => {
+      console.log(e.key)
+      switch (e.key) {
+        case 'f':
+          console.log("pressed f")
+          if (Cookies.get('flashOn') === 'true') {
+            Cookies.set('flashOn', 'false');
+            console.log('flash is off')
+          }
+          else {
+            Cookies.set('flashOn', 'true');
+            console.log('flash is on')
+          } 
+        break
+      }
+    })
+  }
+}, false);
 
 
 
@@ -768,7 +770,7 @@ async function runCommand(command) {
     if (binaryCode === '') {
       binaryCode = command;
     }
-    if (webCode === "01984") {
+    if (binaryCode === "01984") {
       await addToResponseText("This is an invalid response. Stop. Now.", "color:white;");
       await delay(1000);
       await addToResponseText("What?");
@@ -1415,9 +1417,8 @@ async function runCommand(command) {
   //Make sure to check out commmented out to do items, mainly Mary talking to Ash
 
   // Set focus on the command line
+
   commandLineContainer.style.display = 'block'
   scrollToBottom();
   commandLine.focus();
-
-
 }

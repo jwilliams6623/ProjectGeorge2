@@ -306,13 +306,13 @@ async function runCommand(command) {
     else if (hasAskForProgram === '4' || hasAskForProgram === 'four') {
       while (hasAskForProgram === '4' || hasAskForProgram === 'four') {
         $('#command-history').html(' ');
-        await addToResponseText("Remnants of Them", "padding:10px;` color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:none;", "", 'window.location.href = "RemnantsOfThem.html"');
+        await addToResponseText("Remnants of Them", "padding:10px;` cursor:pointer; color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:none;", "", 'window.location.href = "RemnantsOfThem.html"');
         await delay(1000);
         $('#command-history').html(' ');
-        await addToResponseText("Remnants of Them", "width:15px; margin: 50px auto 50px auto; color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:left;", "", 'window.location.href = "RemnantsOfThem.html"');
+        await addToResponseText("Remnants of Them", "width:15px; cursor:pointer; margin: 50px auto 50px auto; color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:left;", "", 'window.location.href = "RemnantsOfThem.html"');
         await delay(1000);
         $('#command-history').html(' ');
-        await addToResponseText("Remnants of Them", "padding:30px; font-weight:bold; color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:right;", "", 'window.location.href = "RemnantsOfThem.html"');
+        await addToResponseText("Remnants of Them", "padding:30px; cursor:pointer; font-weight:bold; color:blue; font-family:Lucida Console; text-shadow: 2px 2px red; float:right;", "", 'window.location.href = "RemnantsOfThem.html"');
         await delay(1000);
       }
     }

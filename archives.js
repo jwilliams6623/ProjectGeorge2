@@ -21,7 +21,8 @@ function openNav() {
 
   function memFileOpen() {
     Cookies.set('memFile1', 'true');
-    alert('Refresh, then maybe check the menu again')
+    location.reload();
+    alert('Something seems... different');
   }
   
 
