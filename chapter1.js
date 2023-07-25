@@ -36,6 +36,7 @@ let consoleState = consoleStateTypes.Hello;
 
 function foundFile() {
   Cookies.set('memFile', 'true');
+  document.querySelectorAll(".glitch").forEach(a=>a.style.display = "none");
 }
 
 /* Set the width of the side navigation to 250px */

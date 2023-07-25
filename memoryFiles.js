@@ -159,7 +159,7 @@ async function runCommand(command) {
     // User just entered their name, so I will...
     await addToResponseText("Input received " + command, + ".");
     await delay(1000);
-    await addToResponseText("Please select a program to view", 'color:blue; font-family:Lucida Console; text-shadow: 2px 2px red;', "myCssClass", 'alert("asdf");');
+    await addToResponseText("Please select a program to view");
     await delay(1000);
     await addToResponseText("Program 1: GH0STS");
     await delay(1000);
@@ -342,6 +342,7 @@ async function runCommand(command) {
       //inventory
       Cookies.set('hasFlashLight', 'true');
       Cookies.set('memFile', 'true');
+      Cookies.set('hasCalc', 'true');
     }
     else if (hasAskForProgram === 'reset') {
       //George
@@ -369,6 +370,7 @@ async function runCommand(command) {
       // Inventory
       Cookies.remove('hasFlashLight');
       Cookies.remove('memFile');
+      Cookies.remove('hasCalc');
 
     }
   }
