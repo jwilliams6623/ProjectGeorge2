@@ -16,132 +16,143 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Neonderthaw&family=Orbitron:wght@400;500;700&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Pixels&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&family=Homemade+Apple&family=Splash&display=swap" rel="stylesheet">
 </head>
 
 <body onload="notes()">
-  <div class="console-page">
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a class="memF" href="memoryFiles.html" style="display:none;">Memory Files</a>
-      <a href="chapter1.html">Chapter 1</a>
-      <a href="chapter2.html">Chapter 2</a>
-      <a href="#">Chapter 3</a>
-      <a style="color:blue; text-shadow: 2px 2px 5px red; font-family:OCR A Std, monospace;"
-        href="archives.html">Archives</a>
-    </div>
-    <h2 style="color:white; font-size: 50px; font-family: 'Cute Font', cursive;" onclick="openNav()">Menu</h2>
+  <div class="foreground">
+    <div class="console-page">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="memF" href="memoryFiles.html" style="display:none;">Memory Files</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="#">Chapter 3</a>
+        <a style="color:blue; text-shadow: 2px 2px 5px red; font-family: 'Rubik Pixels', cursive;"
+          href="archives.html">Archives</a>
+      </div>
+      <h2 style="color:white; font-size: 50px; font-family: 'Cute Font', cursive;" onclick="openNav()">Menu</h2>
 
-    <!-- first row -->
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="row">
-          <div class="col-lg-12 george-title"> George</div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3"></div>
-          <div class="col-lg-6">
-            <div class="george-info">
-              <ul>
-                <li class="george-create" style="display:none;">Claims to have created the calculator, and what was
-                  inside it</li>
-                <li class="george-quote" style="display:none;">"I'll see you in Africa"</li>
-                <li class="george-back" style="display:none;">Won't open the Remnant file because he "can't go back
-                  there"</li>
-                <li class="george-violet" style="display:none;">Likes violets???</li>
-              </ul>
+      <!-- first row -->
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 george-title"> George</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="george-info">
+                <ul>
+                  <li class="george-create" style="display:none;">Claims to have created the calculator, and what was
+                    inside it</li>
+                  <li class="george-quote" style="display:none;">"I'll see you in Africa"</li>
+                  <li class="george-back" style="display:none;">Won't open the Remnant file because he "can't go back
+                    there"</li>
+                  <li class="george-violet" style="display:none;">Likes violets???</li>
+                </ul>
+              </div>
             </div>
+            <div class="col-lg-3"></div>
           </div>
-          <div class="col-lg-3"></div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 phantom-title">Phantom</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <div class="phantom-info">
+                <ul>
+                  <li class="phantom-fix" style="display: none;">Claims to be the only person capable of saving George
+                  </li>
+                  <li class="phantom-past" style="display: none;">Has seen a time where Ghost was very, very angry</li>
+                  <li class="phantom-ghost" style="display: none;">Has been trying to get rid of Ghost for ages</li>
+                  <li class="phantom-trust" style="display: none;">Has always wanted trust from others, especially
+                    George
+                  </li>
+                  <li class="phantom-fail" style="display: none;">Has tried to "fix things" before</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 ghost-title">Ghost</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="ghost-info">
+                <ul>
+                  <li class="ghost-liars">Doesn't like liars</li>
+                  <li class="ghost-happy" style="display: none;">Seems to be unhappy</li>
+                  <li class="ghost-doubt" style="display: none;">Once doubted, perhaps still doubts, those close to him
+                  </li>
+                  <li class="ghost-power" style="display: none;">Feels or once felt powerless</li>
+                  <li class="ghost-forget" style="display: none;">Who doesn't wish to be forgotten?</li>
+                  <li class="ghost-social" style="display:none;">Used to have someone to talk too, misses them</li>
+                  <li class="ghost-quote" style="display: none;">"I'll be watching you"</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+          </div>
         </div>
       </div>
-      <div class="col-lg-4">
-        <div class="row">
-          <div class="col-lg-12 phantom-title">Phantom</div>
-        </div>
-        <div class="row">
-          <div class="col-lg-2"></div>
-          <div class="col-lg-8">
-            <div class="phantom-info">
-              <ul>
-                <li class="phantom-fix" style="display: none;">Claims to be the only person capable of saving George
-                </li>
-                <li class="phantom-past" style="display: none;">Has seen a time where Ghost was very, very angry</li>
-                <li class="phantom-ghost" style="display: none;">Has been trying to get rid of Ghost for ages</li>
-                <li class="phantom-trust" style="display: none;">Has always wanted trust from others, especially George
-                </li>
-                <li class="phantom-fail" style="display: none;">Has tried to "fix things" before</li>
-              </ul>
+      <div class="row">
+        <div class="inventory">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
+              <img class="flash-img" style="display:none; width:100%; height:50%; object-fit:contain;"
+                src="web.Blacklight.png" alt="flashlight">
             </div>
-          </div>
-          <div class="col-lg-2"></div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="row">
-          <div class="col-lg-12 ghost-title">Ghost</div>
-        </div>
-        <div class="row">
-          <div class="col-lg-3"></div>
-          <div class="col-lg-6">
-            <div class="ghost-info">
-              <ul>
-                <li class="ghost-liars">Doesn't like liars</li>
-                <li class="ghost-happy" style="display: none;">Seems to be unhappy</li>
-                <li class="ghost-doubt" style="display: none;">Once doubted, perhaps still doubts, those close to him
-                </li>
-                <li class="ghost-power" style="display: none;">Feels or once felt powerless</li>
-                <li class="ghost-forget" style="display: none;">Who doesn't wish to be forgotten?</li>
-                <li class="ghost-social" style="display:none;">Used to have someone to talk too, misses them</li>
-                <li class="ghost-quote" style="display: none;">"I'll be watching you"</li>
-              </ul>
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
+              <img onclick="memFileOpen()" class="file-img"
+                style="display:none; cursor:pointer; width:100%; height:50%; object-fit:contain;" src="web.File.png"
+                alt="file">
             </div>
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
+              <img onclick="alert('A reminder of the simpler days')" class="calc-img"
+                style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Calc.png" alt="calculator">
+            </div>
+            <div class="col-lg-4">
+              <img class="cassette-img"
+                src="web.cassette.png" alt="VHS">
+                <div class="chp3Teaser">Chapter 3 Coming Soon</div>
+            </div>
+            
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
+              <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.LIghtbulb.png"
+                alt="lightbulb">
+            </div>
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
+              <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Note.png" alt="notebook">
+            </div>
+            <div class="col-lg-1"
+              style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
+              <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Flash (1).png"
+                alt="blacklight">
+            </div>
+            <!-- names accidentally mixed this IS the blacklight -->
+            <div class="col-lg-1"></div>
           </div>
-          <div class="col-lg-3"></div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="inventory">
-        <div class="row">
-          <div class="col-lg-1"></div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
-            <img class="flash-img" style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Blacklight.png"
-              alt="flashlight"></div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
-            <img onclick="memFileOpen()" class="file-img"
-              style="display:none; cursor:pointer; width:100%; height:50%; object-fit:contain;" src="web.File.png"
-              alt="file"></div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;; padding-top: 40px; padding-bottom: 40px;">
-            <img onclick="alert('A reminder of the simpler days')"class="calc-img" style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Calc.png" alt="calculator">
-          </div>
-          <div class="col-lg-4"><img style="display:none; width:100%; height:50%; object-fit:contain;"
-              src="web.cassette.png" alt="VHS"></div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
-            <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.LIghtbulb.png"
-              alt="lightbulb"></div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
-            <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Note.png" alt="notebook">
-          </div>
-          <div class="col-lg-1"
-            style="height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;; padding-top: 40px; padding-bottom: 40px;">
-            <img style="display:none; width:100%; height:50%; object-fit:contain;"
-              src="web.Flash (1).png" alt="blacklight"></div> 
-              <!-- names accidentally mixed this IS the blacklight -->
-          <div class="col-lg-1"></div>
-        </div>
-
-      </div>
-    </div>
-
+  </div>
   </div>
 
-  </div>
 </body>
 
 </html>

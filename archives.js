@@ -24,7 +24,8 @@ function openNav() {
     location.reload();
     alert('Something seems... different');
   }
-  
+
+
 
   function notes() {
     if (Cookies.get('currentUser' === 'AShley')) {
@@ -100,5 +101,40 @@ function openNav() {
     // if (Cookies.get('georgeViolet') === 'true') {
     //   document.querySelectorAll(".george-violet").forEach(a=>a.style.display = "inherit");
     // }
+
+
+    //remember we don't want inventory stuff in here, this is good
+  if (Cookies.get('georgeTitle') === 'true' && Cookies.get('georgeCreate') === 'true' && Cookies.get('georgeQuote') === 'true'
+  && Cookies.get('georgeBack') === 'true' && Cookies.get('georgeViolet') ==='true' && Cookies.get('phantomTitle') ==='true'
+  && Cookies.get('phantomFix') ==='true' && Cookies.get('phantomPast') ==='true' && Cookies.get('phantomGhost') ==='true'
+  && Cookies.get('phantomTrust') ==='true' && Cookies.get('phantomFail') ==='true' && Cookies.get('ghostTitle') ==='true'
+  && Cookies.get('ghostLiars') ==='true' && Cookies.get('ghostHappy') ==='true'  && Cookies.get('ghostDoubt') ==='true'
+  && Cookies.get('ghostPower') ==='true' && Cookies.get('ghostForget') ==='true' && Cookies.get('ghostSocial') ==='true'
+  && Cookies.get('ghostQuote') ==='true' ) {
+    document.querySelectorAll(".cassette-img").forEach(a=>a.style.display = "inherit");
+  }
+
+     
+      
+      
+      
+      
+      //Phantom
+      
+      //Ghost
+      
+      
+      
+      
+     
+      
+     
+      
+      // inventory
+     
+      
+      
+
+
 
   }
