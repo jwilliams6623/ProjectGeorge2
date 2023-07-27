@@ -69,6 +69,7 @@ h1 {
     display: flex;
     align-items: center;
     cursor: pointer;
+    visibility: visible;
 }
 
 
@@ -158,6 +159,7 @@ h1 {
     /* margin-right:100px;
     margin-top: 50px; */
     vertical-align: top;
+    visibility: hidden;
 }
 .ghost-title:hover {
     text-shadow:3px 3px 50px #d600ff;
@@ -181,6 +183,10 @@ h1 {
     text-align: center;
     color: white; 
     vertical-align: top;
+}
+
+.mem-div:hover {
+   opacity: 1;
 }
 
 .chp3teaser {

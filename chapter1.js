@@ -36,8 +36,16 @@ let consoleState = consoleStateTypes.Hello;
 
 function foundFile() {
   Cookies.set('memFile', 'true');
-  document.querySelectorAll(".glitch").forEach(a=>a.style.display = "none");
+  Cookies.set('glitch', 'true');
+  document.querySelectorAll(".glitch").forEach(a=>a.style.visibility = "hidden");
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (Cookies.get('glitch') === 'true') {
+    document.querySelectorAll(".glitch").forEach(a=>a.style.visibility = "hidden");
+  }
+}, false);
+
 
 /* Set the width of the side navigation to 250px */
 function openNav() {
@@ -151,6 +159,7 @@ function delay(milliseconds) {
 // Most of user interaction logic should live here (or in a sub method)
 async function runCommand(command) {
   // Handle commands based on the current page 'state'
+  
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
     // User just entered their name, so I will...
     Cookies.set("currentuser", command);

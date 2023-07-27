@@ -339,10 +339,11 @@ async function runCommand(command) {
       Cookies.set('ghostForget', 'true');
       Cookies.set('ghostSocial', 'true');
       Cookies.set('ghostQuote', 'true');
-      //inventory
+      //inventory & Misc
       Cookies.set('hasFlashLight', 'true');
       Cookies.set('memFile', 'true');
       Cookies.set('hasCalc', 'true');
+      Cookies.remove('glitch');
     }
     else if (hasAskForProgram === 'reset') {
       //George
@@ -371,6 +372,7 @@ async function runCommand(command) {
       Cookies.remove('hasFlashLight');
       Cookies.remove('memFile');
       Cookies.remove('hasCalc');
+      Cookies.remove('glitch');
 
     }
   }

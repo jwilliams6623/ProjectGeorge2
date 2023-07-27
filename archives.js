@@ -29,10 +29,10 @@ function openNav() {
 
   function notes() {
     if (Cookies.get('currentUser' === 'AShley')) {
-      // fill this later
+      console.log('nice to see you again')
     }
     if (Cookies.get('ghostTitle') === 'true') {
-      document.querySelectorAll(".ghost-title").forEach(a=>a.style.visbility = "visible");
+      document.querySelectorAll(".ghost-title").forEach(a=>a.style.visibility = "visible");
     }
     if (Cookies.get('ghostLiars') === 'true') {
       document.querySelectorAll(".ghost-liars").forEach(a=>a.style.display = "inherit");
@@ -88,15 +88,18 @@ function openNav() {
 
     if (Cookies.get('memFile') === 'true') {
       document.querySelectorAll(".file-img").forEach(a=>a.style.display = "inherit");
+      document.querySelectorAll(".mem-div").forEach(a=>a.style.visibility = "visible");
     }
     if (Cookies.get('memFile1') === 'true') {
       document.querySelectorAll(".memF").forEach(a=>a.style.display = "inherit");
     }
     if (Cookies.get('hasCalc') === 'true') {
       document.querySelectorAll(".calc-img").forEach(a=>a.style.display = "inherit");
+      document.querySelectorAll(".calc-div").forEach(a=>a.style.visibility = "visible");
     }
     if (Cookies.get('hasFlashLight') === "true") { 
       document.querySelectorAll(".flash-img").forEach(a=>a.style.display = "inherit");
+      document.querySelectorAll(".flash-div").forEach(a=>a.style.visibility = "visible");
     }
     // if (Cookies.get('georgeViolet') === 'true') {
     //   document.querySelectorAll(".george-violet").forEach(a=>a.style.display = "inherit");
