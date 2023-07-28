@@ -25,7 +25,7 @@ let likeLiars;
 
 
 let lineIndex = 0;
-var delayTime = 1; //20;
+var delayTime = 40;
 
 // Keep track of pages 'state' or what the application is doing right now.
 const consoleStateTypes = {

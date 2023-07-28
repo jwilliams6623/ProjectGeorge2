@@ -111,23 +111,26 @@
           <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-1 flash-div"
-              onclick="alert('Press f to turn on the flashlight and gain access to helpful hints.')"style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
+              onclick="alert('Press F to turn on the flashlight and gain access to helpful hints.')"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd; position: relative;">
               <img class="flash-img" style="display:none; width:100%; height:50%; object-fit:contain;"
                 src="web.Blacklight.png" alt="flashlight">
             </div>
 
             <div class="col-lg-1 mem-div"
-              style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
+              style="position: relative; visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
               <img onclick="memFileOpen()" class="file-img"
                 style="display:none; cursor:pointer; width:100%; height:50%; object-fit:contain;" src="web.File.png"
                 alt="file">
             </div>
-            
+
             <div class="col-lg-1 calc-div"
-              style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
-              <img onclick="alert('A reminder of the simpler days')" class="calc-img"
+            onclick="alert('A reminder of the good old days. I wonder if it could still be useful.')" style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd; position: relative;">
+              <img class="calc-img"
                 style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Calc.png" alt="calculator">
+              <div class="calc-text" style="position: absolute; left:10px; right: 10px; background-color: black; opacity: 0;"></div>
             </div>
+
             <div class="col-lg-4">
               <img class="cassette-img" src="web.cassette.png" alt="VHS">
               <div class="chp3Teaser">Chapter 3 Coming Soon</div>

@@ -185,8 +185,17 @@ h1 {
     vertical-align: top;
 }
 
-.mem-div:hover {
+
+.flash-div:hover + .flash-text{
+    opacity: 1;
+ } 
+
+.mem-div:hover + .mem-text{
    opacity: 1;
+}
+
+.calc-div:hover + .calc-text{
+    opacity: 0;
 }
 
 .chp3teaser {
