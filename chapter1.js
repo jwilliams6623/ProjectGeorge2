@@ -33,6 +33,20 @@ const consoleStateTypes = {
 }
 let consoleState = consoleStateTypes.Hello;
 
+
+function foundFile() {
+  Cookies.set('memFile', 'true');
+  Cookies.set('glitch', 'true');
+  document.querySelectorAll(".glitch").forEach(a=>a.style.visibility = "hidden");
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (Cookies.get('glitch') === 'true') {
+    document.querySelectorAll(".glitch").forEach(a=>a.style.visibility = "hidden");
+  }
+}, false);
+
+
 /* Set the width of the side navigation to 250px */
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
@@ -75,6 +89,7 @@ async function handleCommand(command) {
 }
 
 window.onload = function () {
+  
   commandLine = document.querySelector("#command-line");
   commandHistory = document.querySelector("#command-history");
   commandLineContainer = document.querySelector("#command-line-container");
@@ -125,9 +140,14 @@ async function writeResponseSlowly(responseDivId, text) {
   responseLine.innerHTML += text.substring(0, 1); // write first character in the string;
   scrollToBottom();
 
-  await delay(20);
+  await delay(40);
 
   await writeResponseSlowly(responseDivId, text.substring(1, text.length)); // remove the first character and call the function again
+}
+
+function onClick()
+{
+  Cookies.set('progress', '1');
 }
 
 // Wait for x miliseconts
@@ -139,9 +159,11 @@ function delay(milliseconds) {
 // Most of user interaction logic should live here (or in a sub method)
 async function runCommand(command) {
   // Handle commands based on the current page 'state'
+  
   if (consoleState === consoleStateTypes.AskWhoAreYou) {
     // User just entered their name, so I will...
-    await addToResponseText("It's nice to meet you " + command, + ".");
+    Cookies.set("currentuser", command);
+    await addToResponseText("It's nice to meet you " + Cookies.get('currentuser'), + ".");
     await delay(1000);
     await addToResponseText("I can't believe this is actually working.", "color:");
     await delay(1000);
@@ -151,7 +173,6 @@ async function runCommand(command) {
     await delay(1000);
     await addToResponseText("Let's see...");
     await delay(1000);
-
     await addToResponseText("What's your favorite color?");
     consoleState = consoleStateTypes.AskFavoriteColor;
   }
