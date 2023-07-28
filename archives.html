@@ -1,0 +1,177 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+  <script src="archives.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cute+Font&family=Neonderthaw&family=Orbitron:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik+Pixels&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Handjet:wght@300;400;500&family=Homemade+Apple&family=Splash&display=swap"
+    rel="stylesheet">
+</head>
+
+<body onload="notes()">
+  <div class="foreground">
+    <div class="console-page">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a class="memF" href="memoryFiles.html" style="display:none;">Memory Files</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="#">Chapter 3</a>
+        <a style="color:blue; text-shadow: 2px 2px 5px red; font-family: 'Rubik Pixels', cursive;"
+          href="archives.html">Archives</a>
+      </div>
+      <h2 style="margin-left: 15px; margin-top: 10px; color:white; font-size: 70px;" onclick="openNav()">&#8801;</h2>
+
+      <!-- first row -->
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 george-title"> George</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="george-info">
+                <ul>
+                  <li class="george-create" style="display:none;">Claims to have created the calculator, and what was
+                    inside it</li>
+                  <li class="george-quote" style="display:none;">"I'll see you in Africa"</li>
+                  <li class="george-back" style="display:none;">Won't open the Remnant file because he "can't go back
+                    there"</li>
+                  <li class="george-violet" style="display:none;">Likes violets???</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 phantom-title">Phantom</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <div class="phantom-info">
+                <ul>
+                  <li class="phantom-fix" style="display: none;">Claims to be the only person capable of saving George
+                  </li>
+                  <li class="phantom-past" style="display: none;">Has seen a time where Ghost was very, very angry</li>
+                  <li class="phantom-ghost" style="display: none;">Has been trying to get rid of Ghost for ages</li>
+                  <li class="phantom-trust" style="display: none;">Has always wanted trust from others, especially
+                    George
+                  </li>
+                  <li class="phantom-fail" style="display: none;">Has tried to "fix things" before</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-2"></div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="row">
+            <div class="col-lg-12 ghost-title">Ghost</div>
+          </div>
+          <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+              <div class="ghost-info">
+                <ul>
+                  <li class="ghost-liars">Doesn't like liars</li>
+                  <li class="ghost-happy" style="display: none;">Seems to be unhappy</li>
+                  <li class="ghost-doubt" style="display: none;">Once doubted, perhaps still doubts, those close to him
+                  </li>
+                  <li class="ghost-power" style="display: none;">Feels or once felt powerless</li>
+                  <li class="ghost-forget" style="display: none;">Who doesn't wish to be forgotten?</li>
+                  <li class="ghost-social" style="display:none;">Used to have someone to talk too, misses them</li>
+                  <li class="ghost-quote" style="display: none;">"I'll be watching you"</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="inventory">
+          <div class="row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-1 flash-div"
+              onclick="alert('Press f to turn on the flashlight and gain access to helpful hints.')"style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
+              <img class="flash-img" style="display:none; width:100%; height:50%; object-fit:contain;"
+                src="web.Blacklight.png" alt="flashlight">
+            </div>
+
+            <div class="col-lg-1 mem-div"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
+              <img onclick="memFileOpen()" class="file-img"
+                style="display:none; cursor:pointer; width:100%; height:50%; object-fit:contain;" src="web.File.png"
+                alt="file">
+            </div>
+            
+            <div class="col-lg-1 calc-div"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center; border: 2px solid #a7ffdd;">
+              <img onclick="alert('A reminder of the simpler days')" class="calc-img"
+                style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Calc.png" alt="calculator">
+            </div>
+            <div class="col-lg-4">
+              <img class="cassette-img" src="web.cassette.png" alt="VHS">
+              <div class="chp3Teaser">Chapter 3 Coming Soon</div>
+            </div>
+
+            <div class="col-lg-1"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;">
+              <img style="display:none; " src="web.LIghtbulb.png" alt="lightbulb">
+            </div>
+            <div class="col-lg-1"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;">
+              <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Note.png" alt="notebook">
+            </div>
+            <div class="col-lg-1"
+              style="visibility: hidden; height: 200px; display:flex; align-items:center;border: 2px solid #f3b7ff;">
+              <img style="display:none; width:100%; height:50%; object-fit:contain;" src="web.Flash (1).png"
+                alt="blacklight">
+            </div>
+            <!-- names accidentally mixed this IS the blacklight -->
+            <div class="col-lg-1"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+</body>
+
+</html>
+
+<!-- html>
+    <head> 
+        <script src="js.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Welcome to the <s>End</s> Beginning</h1>          
+        <button onclick="tallyKeeper()" class="button button1">Chapter 1</button>
+        <button class="button button2">Chapter 2</button>
+        <button class="button button3">Chapter 3</button>
+        <div id="div1">
+             <p>Hello</p>
+        </div>
+    </body>
+</html>
+  -->
