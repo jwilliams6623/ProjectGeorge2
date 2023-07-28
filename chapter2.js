@@ -115,7 +115,7 @@ function addToResponseTextFast(text, styling = '') {
 
 async function addToResponseText(text, styling = '', cssClass, clickEvent) {
   let responseDivId = `response${lineIndex++}`;
-  commandHistory.innerHTML += `<div id='${responseDivId}' style='${styling};' class='${cssClass}' onclick='${clickEvent}' ></div>`;
+  commandHistory.innerHTML += `<div id='${responseDivId}' style='${styling};' class='${cssClass}' onclick="${clickEvent}" ></div>`;
 
   scrollToBottom();
   await writeResponseSlowly(responseDivId, text);
@@ -308,7 +308,7 @@ async function runCommand(command) {
     await addToResponseText("Th3 st0r13s 0f wh3n 1 was...", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("...", "color:#d600ff;");
-    document.getElementById("hidden-text").innerHTML = "human";
+    // document.getElementById("hidden-text").innerHTML = "human";
     await addToResponseText("1 l0st s1ght 0f that a l0ng t1m3 ag0", "color:#d600ff;");
     await delay(1000);
     await addToResponseText("1'm br1ng1ng mys3lf back t0 a... b3tter t1m3", "color:#d600ff;");
@@ -374,7 +374,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("N*t @fter y*u...", "color:#001eff;");
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "killed so many";
+      // document.getElementById("hidden-text").innerHTML = "killed so many";
       await delay(1000);
       await addToResponseText("Th!s !sn'y my f@ult", "color:#001eff;");
       await delay(1000);
@@ -382,7 +382,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("4nd d0n't 4ct l1ke y0u're better th4n me", "color:#d600ff;");
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "You used your own brother against me";
+      //document.getElementById("hidden-text").innerHTML = "You used your own brother against me";
       await delay(1000);
       await addToResponseText("4ll bec4use y0u d1dn't w4nt t0 be the v1ll14n 4nym0re", "color:#d600ff;");
       await delay(1000);
@@ -464,7 +464,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Th!s....", "color:#001eff;");
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "murderer?";
+      //document.getElementById("hidden-text").innerHTML = "murderer?";
       await delay(1000);
       await addToResponseText("Th4t's n0t..", "color:#d600ff;");
       await delay(1000);
@@ -614,6 +614,7 @@ async function runCommand(command) {
     else if (gForget === 'no') {
       await addToResponseText("So be it");
       await delay(1000);
+      document.getElementById("hint-text").innerHTML = "Try binary";
       await addToResponseText("Th4nk y0u", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("Th@nk y*u? They just c*ndemned h!m t* suffer f*rever", "color:#001eff;");
@@ -666,7 +667,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("She's de@d", "color:#001eff;");
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "S0 ar3 w3";
+      //document.getElementById("hidden-text").innerHTML = "S0 ar3 w3";
       await delay(1000);
       await addToResponseText("In a way");
       await delay(1000);
@@ -895,9 +896,9 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Ending 4 of ?: family Reunion", "color:white;", "color:#001eff;");
       await delay(10000);
-      document.getElementById("hidden-text").innerHTML = "Ash, is that really you?";
+      //document.getElementById("hidden-text").innerHTML = "Ash, is that really you?";
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "I thought I'd never see you again";
+      //document.getElementById("hidden-text").innerHTML = "I thought I'd never see you again";
       await delay(1000);
       //after this there can be seen Mary talking to Ash, can be seen with the purple calc
     }
@@ -1055,7 +1056,7 @@ async function runCommand(command) {
     if (whoTurnOff === '') {
       whoTurnOff = command;
     }
-    if (whoTurnOff === 'Ph' || whoTurnOff === "Phantom") {
+    if (whoTurnOff === 'Ph' || whoTurnOff === "Phantom" || whoTurnOff === 'ph' || whoTurnOff === 'phantom') {
       //gh talks here
       await addToResponseText("0h, thank y0u", "color:#d600ff;");
       await delay(1000);
@@ -1093,7 +1094,7 @@ async function runCommand(command) {
       ghQuestions = "";
 
     }
-    else if (whoTurnOff === "Gh" || whoTurnOff === "Ghost") {
+    else if (whoTurnOff === "Gh" || whoTurnOff === "Ghost" || whoTurnOff === 'gh' || whoTurnOff === 'ghost') {
       //phantom talks here
       await addToResponseText("R!ght, th@nk y*u f*r th@t.", "color:#001eff;");
       await delay(1000);
@@ -1150,7 +1151,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("Th1s 1s 0ur f4te", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("Every t1me we g0 t0 4 new pl4ce, we rel1ve 0ur l1ve, 1n d1fferent w4ys", "color:#d600ff;");
+      await addToResponseText("Every t1me we g0 t0 4 new pl4ce, we rel1ve 0ur l1ves, 1n d1fferent w4ys", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("1t's the s4me, 3very t1me, f1rst Ge0rge, then Ph4nt0m, then me", "color:#d600ff;");
       await delay(1000);
@@ -1182,17 +1183,17 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("1'm pr0b4bly g01ng t0 be cut 0ff here s00n", "color:#d600ff;");
       await delay(1000);
-      await addToResponseText("But n0t bef0re 1 g1ve y0u th1s", "color:blue; text-shadow: 2px 2px 3px red; cursor: pointer;", "", "Cookies.set('hasFlashlight', 'true');");
+      await addToResponseText("But n0t bef0re 1 g1ve y0u th1s", "color:blue; text-shadow: 2px 2px 3px red; cursor: pointer;", "", "alert('You found a Flashlight'); Cookies.set('hasFlashlight', 'true');");
       await delay(1000);
-      await addToResponseText("H0pefully, 1t c4n help shed s0me l1ght 0n th1ngs", "color:#d600ff;");
+      await addToResponseText("M4bye it w1ll help y0u w0rk 4r0und s0me 0f th4t intenti0nal dec4y", "color:#d600ff;");
+      await delay(1000);
+      await addToResponseText("4nd, h0pefully, 1t c4n help shed s0me l1ght 0n th1ngs", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("4nd, 4s Ge0rge 4lw4ys s41d, 1f y0u get stuck, smell the fl0wers", "color:#d600ff;");
       await delay(1000);
       await addToResponseText("Espec14lly the v10—", "color:#d600ff;");
       await delay(1000);
       $('#command-history').html(' ');
-      await delay(1000);
-      document.getElementById("hint-text").innerHTML = "F1nd th3 v1ol3ts";
       await delay(1000);
       await addToResponseText("Ending 7 of ?: A New Dawn", "color:white;"); //add text on side that say FIND THE VIOLETS
       await delay(1000);
@@ -1210,7 +1211,7 @@ async function runCommand(command) {
       await delay(1000);
       await addToResponseText("1 kn0w th1s b3caus3 h3 b3tray3d --_--__ f0r 1t", "color:#d600ff;"); //hide the word brother here
       await delay(1000);
-      document.getElementById("hidden-text").innerHTML = "his own brother";
+      //document.getElementById("hidden-text").innerHTML = "his own brother";
       await delay(1000);
       await addToResponseText("and—", "color:#d600ff;");
       await delay(1000);
